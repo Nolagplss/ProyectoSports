@@ -2,9 +2,9 @@
 
 namespace SportsCenterApi.Services
 {
-    public interface IUserService
+    public interface IUserService : IGenericService<User>
     {
         Task<User?> GetByEmailAsync(string email);
-        Task<bool> RegisterUserAsync(User user);
+        Task<User> RegisterUserAsync(User user);
     }
 }

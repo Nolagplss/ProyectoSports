@@ -4,25 +4,30 @@ using SportsCenterApi.Repositories;
 
 namespace SportsCenterApi.Services
 {
-    public class UserService : IUserService
+    public class UserService : GenericService<User>, IUserService
     {
         private readonly IUserRepository _userRepository;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository) : base(userRepository)
         {
             _userRepository = userRepository;
         }
 
-     
-        public async Task<bool> RegisterUserAsync(User user)
+
+        //User registration with validation
+        public async Task<User> RegisterUserAsync(User user)
         {
             var existingUser = await _userRepository.GetByEmailAsync(user.Email);
             if (existingUser != null)
-                throw new Exception("User with this email already exists.");
+                throw new InvalidOperationException("User with this email already exists.");
 
-            await _userRepository.AddAsync(user);
-            return true;
+            if (string.IsNullOrWhiteSpace(user.Email) || string.IsNullOrWhiteSpace(user.FirstName))
+                throw new ArgumentException("Email and name are required.");
+
+
+            return await _userRepository.AddAsync(user);
         }
+
 
         public async Task<User?> GetByEmailAsync(string email)
         {

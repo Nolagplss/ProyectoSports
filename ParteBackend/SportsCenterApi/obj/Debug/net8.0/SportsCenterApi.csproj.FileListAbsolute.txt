@@ -110,3 +110,4 @@ C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\
 C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\Debug\net8.0\SportsCenterApi.pdb
 C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\Debug\net8.0\SportsCenterApi.genruntimeconfig.cache
 C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\Debug\net8.0\ref\SportsCenterApi.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\Debug\net8.0\SportsCenterApi.sourcelink.json

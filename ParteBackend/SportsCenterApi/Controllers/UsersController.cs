@@ -1,0 +1,90 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using SportsCenterApi.Models;
+using SportsCenterApi.Services;
+using SportsCenterApi.Models.DTO;
+
+namespace SportsCenterApi.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UsersController : ControllerBase
+    {
+        private readonly IUserService _userService;
+
+        //Injecting the IUserService to handle user-related operations
+        public UsersController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        {
+            var users = await _userService.GetAllAsync();
+            return Ok(users);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            var user = await _userService.GetByIdAsync(id);
+            if (user == null)
+                return NotFound();
+
+            return Ok(user);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<User>> CreateUser(UserCreateDto userDto)
+        {
+            try
+            {
+                var user = new User
+                {
+                    FirstName = userDto.FirstName,
+                    LastName = userDto.LastName,
+                    Email = userDto.Email,
+                    Password = userDto.Password,
+                    Phone = userDto.Phone,
+                    RoleId = userDto.RoleId
+                };
+
+                var createdUser = await _userService.RegisterUserAsync(user);
+                return CreatedAtAction(nameof(GetUser), new { id = createdUser.UserId }, createdUser);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<User>> UpdateUser(int id, User user)
+        {
+            if (id != user.UserId)
+                return BadRequest();
+
+            var updatedUser = await _userService.UpdateAsync(id, user);
+            if (updatedUser == null)
+                return NotFound();
+
+            return Ok(updatedUser);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteUser(int id)  
+        {
+            var deleted = await _userService.DeleteAsync(id);
+            if (!deleted)
+                return NotFound();
+
+            return NoContent();
+        }
+    }
+}

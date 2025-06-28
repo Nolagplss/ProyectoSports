@@ -2,6 +2,7 @@
 using SportsCenterApi.Models;
 using Microsoft.EntityFrameworkCore;
 using SportsCenterApi.Services;
+using SportsCenterApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,9 @@ builder.Services.AddDbContext<SportsCenterContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped(typeof(IGenericService<>), typeof(GenericService<>));
-
-
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRespository<>));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
