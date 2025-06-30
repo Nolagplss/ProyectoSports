@@ -111,3 +111,15 @@ C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\
 C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\Debug\net8.0\SportsCenterApi.genruntimeconfig.cache
 C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\Debug\net8.0\ref\SportsCenterApi.dll
 C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\obj\Debug\net8.0\SportsCenterApi.sourcelink.json
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Scrutor.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\holak\Desktop\DI\ProyectoSportsCenter\ParteBackend\SportsCenterApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

@@ -6,5 +6,8 @@ namespace SportsCenterApi.Services
     {
         Task<User?> GetByEmailAsync(string email);
         Task<User> RegisterUserAsync(User user);
+        Task<User?> AuthenticateAsync(string email, string password);
+
+
     }
 }

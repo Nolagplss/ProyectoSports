@@ -33,5 +33,12 @@ namespace SportsCenterApi.Services
         {
             return await _userRepository.GetByEmailAsync(email);
         }
+
+        //Autentication
+        public async Task<User?> AuthenticateAsync(string email, string password)
+        {
+            return await _userRepository.AuthenticateAsync(email, password);
+
+        }
     }
 }

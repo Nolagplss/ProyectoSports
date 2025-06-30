@@ -16,5 +16,13 @@ namespace SportsCenterApi.Repositories
             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
 
+        public async Task<User?> AuthenticateAsync(string email, string password)
+        {
+            return await _context.Users
+                .Include(u => u.Role)
+                .ThenInclude(r => r.Permissions)
+                .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+        }
+
     }
 }
