@@ -16,6 +16,68 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SportsCenterApi.Controllers.FacilitiesController",
+    "Method": "GetAvailableFacilities",
+    "RelativePath": "api/Facilities/available",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "startTime",
+        "Type": "System.TimeOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "endTime",
+        "Type": "System.TimeOnly",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SportsCenterApi.Models.DTO.FacilityDTO, SportsCenterApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SportsCenterApi.Controllers.FacilitiesController",
+    "Method": "GetFacilitiesByName",
+    "RelativePath": "api/Facilities/name/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SportsCenterApi.Models.DTO.FacilityDTO, SportsCenterApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SportsCenterApi.Controllers.ReservationController",
     "Method": "GetAllReservationsAsync",
     "RelativePath": "api/Reservation",

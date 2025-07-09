@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using SportsCenterApi.Services;
 using SportsCenterApi.Repositories;
 using System.Text;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi.Models;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             //CODE BY SAMUEL RADU DRAGOMIR
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +24,9 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
 builder.Services.AddScoped<IReservationService, ReservationService>();
+builder.Services.AddScoped<IFacilitiesRepository, FacilitiesRepository>();
+builder.Services.AddScoped<IFacilityService, FacilityService>();
+
 
 builder.Services.AddEndpointsApiExplorer();
 

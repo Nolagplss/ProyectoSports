@@ -6,9 +6,9 @@ using SportsCenterApi.Services;
 using System.Security.Claims;
 
 namespace SportsCenterApi.Controllers
-{
+{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    //CODE BY SAMUEL RADU DRAGOMIR
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]")]                        
     public class ReservationController : ControllerBase
     {
 
@@ -109,19 +109,25 @@ namespace SportsCenterApi.Controllers
                 return NoContent();
             }
 
-            /*
-            if (userPermissions.Contains("CANCEL_OTHERS_LIMITED"))
+            //Cancell other reservations
+            if (userPermissions.Contains("CANCEL_OTHERS_LIMITED") && reservation.UserId != currentUserId)
             {
-             
+                //Time Now
+                var timeNow = DateTime.Now;
 
-                bool trueRestrictions = "";
-                if (trueRestrictions)
+                //Time of reservation
+                var reservationDateTime = reservation.ReservationDate.ToDateTime(reservation.StartTime);
+
+                //Check if the reservation is in the future
+                if (timeNow < reservationDateTime)
                 {
                     await _reservationService.DeleteAsync(id);
                     return NoContent();
                 }
+
+
             }
-            */
+            
 
 
           
