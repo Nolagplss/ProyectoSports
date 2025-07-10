@@ -12,28 +12,28 @@ namespace SportsCenterApi.Repositories
         }
 
 
-        //Get available facilities
-        public async Task<IEnumerable<Facility>> GetAvailableFacilitiesAsync(DateOnly date, TimeOnly startTime, TimeOnly endTime)
+        public async Task<IEnumerable<Facility>> FilterFacilitiesAsync(string? type, DateOnly? date, TimeOnly? startTime, TimeOnly? endTime)
         {
-            //First take the reservations available
-            var reservedFacilityIds = await _context.Reservations
-              .Where(r => r.ReservationDate == date &&
-                      ((startTime >= r.StartTime && startTime < r.EndTime) ||
-                       (endTime > r.StartTime && endTime <= r.EndTime)))
-             .Select(r => r.FacilityId)
-             .ToListAsync();
+            var query = _context.Facilities.AsQueryable();
 
-            //Second take the facilities
-            return await _context.Facilities
-             .Where(f => !reservedFacilityIds.Contains(f.FacilityId))
-             .ToListAsync();
-        }
+            if (!string.IsNullOrWhiteSpace(type))
+            {
+                query = query.Where(f => f.Name.Contains(type));
+            }
 
-        public async Task<IEnumerable<Facility>> GetFacilitiesByNameAsync(string name)
-        {
-            return await _context.Facilities
-                .Where(f => f.Name == name)
-                .ToListAsync();
+            if (date.HasValue && startTime.HasValue && endTime.HasValue)
+            {
+                var reservedIds = await _context.Reservations
+                    .Where(r => r.ReservationDate == date &&
+                        ((startTime >= r.StartTime && startTime < r.EndTime) ||
+                         (endTime > r.StartTime && endTime <= r.EndTime)))
+                    .Select(r => r.FacilityId)
+                    .ToListAsync();
+
+                query = query.Where(f => !reservedIds.Contains(f.FacilityId));
+            }
+
+            return await query.ToListAsync();
         }
 
     }

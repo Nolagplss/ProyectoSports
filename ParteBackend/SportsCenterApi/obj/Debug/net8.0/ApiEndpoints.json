@@ -17,52 +17,31 @@
   },
   {
     "ContainingType": "SportsCenterApi.Controllers.FacilitiesController",
-    "Method": "GetAvailableFacilities",
-    "RelativePath": "api/Facilities/available",
+    "Method": "FilterFacilities",
+    "RelativePath": "api/Facilities/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "date",
-        "Type": "System.DateOnly",
+        "Type": "System.Nullable\u00601[[System.DateOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
         "Name": "startTime",
-        "Type": "System.TimeOnly",
+        "Type": "System.Nullable\u00601[[System.TimeOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
         "Name": "endTime",
-        "Type": "System.TimeOnly",
+        "Type": "System.Nullable\u00601[[System.TimeOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[SportsCenterApi.Models.DTO.FacilityDTO, SportsCenterApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "SportsCenterApi.Controllers.FacilitiesController",
-    "Method": "GetFacilitiesByName",
-    "RelativePath": "api/Facilities/name/{name}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -121,37 +100,26 @@
   },
   {
     "ContainingType": "SportsCenterApi.Controllers.ReservationController",
-    "Method": "GetByDateReservationsAsync",
-    "RelativePath": "api/Reservation/by-date",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "startDate",
-        "Type": "System.DateOnly",
-        "IsRequired": false
-      },
-      {
-        "Name": "endDate",
-        "Type": "System.DateOnly",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SportsCenterApi.Controllers.ReservationController",
-    "Method": "GetByUserId",
-    "RelativePath": "api/Reservation/by-user/{userId}",
+    "Method": "FilterReservations",
+    "RelativePath": "api/Reservation/filter",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.Nullable\u00601[[System.DateOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.Nullable\u00601[[System.DateOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

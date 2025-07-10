@@ -17,6 +17,10 @@ public partial class Facility
     [StringLength(15)]
     public string Name { get; set; } = null!;
 
+    [Column("type")]
+    [StringLength(15)]
+    public string Type { get; set; } = null!;
+
     [Column("max_reservation_hours")]
     public int MaxReservationHours { get; set; }
 

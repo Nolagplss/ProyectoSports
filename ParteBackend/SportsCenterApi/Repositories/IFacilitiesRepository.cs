@@ -4,10 +4,8 @@ namespace SportsCenterApi.Repositories
 {
     public interface IFacilitiesRepository : IGenericRepository<Facility>
     {
-        Task<IEnumerable<Facility>> GetAvailableFacilitiesAsync(DateOnly date, TimeOnly startTime, TimeOnly endTime);
 
-        Task<IEnumerable<Facility>> GetFacilitiesByNameAsync(string name);
-
+        Task<IEnumerable<Facility>> FilterFacilitiesAsync(string? name, DateOnly? date, TimeOnly? startTime, TimeOnly? endTime);
 
     }
 }

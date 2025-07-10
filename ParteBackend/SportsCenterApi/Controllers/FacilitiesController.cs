@@ -23,23 +23,14 @@ namespace SportsCenterApi.Controllers
 
         //Try using 2025-06-17 from 12:00 to 13:00 to see that one facility has a reservation and does not appear in the results
         [AllowAnonymous]
-        [HttpGet("available")]
-        public async Task<ActionResult<IEnumerable<FacilityDTO>>> GetAvailableFacilities(
-            [FromQuery] DateOnly date,
-            [FromQuery] TimeOnly startTime,
-            [FromQuery] TimeOnly endTime)
+        [HttpGet("filter")]
+        public async Task<ActionResult<IEnumerable<FacilityDTO>>> FilterFacilities(
+            [FromQuery] string? type,
+            [FromQuery] DateOnly? date,
+            [FromQuery] TimeOnly? startTime,
+            [FromQuery] TimeOnly? endTime)
         {
-
-            var facilitiesDTO = await _facilityService.GetAvailableFacilitiesAsync(date, startTime, endTime);
-
-            return Ok(facilitiesDTO);
-        }
-
-        [AllowAnonymous]
-        [HttpGet("name/{name}")]
-        public async Task<ActionResult<IEnumerable<FacilityDTO>>> GetFacilitiesByName(string name)
-        {
-            var facilitiesDTO = await _facilityService.GetFacilitiesByNameAsync(name);
+            var facilitiesDTO = await _facilityService.FilterFacilitiesAsync(type, date, startTime, endTime);
             return Ok(facilitiesDTO);
         }
 

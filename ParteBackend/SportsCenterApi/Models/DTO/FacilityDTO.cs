@@ -3,7 +3,7 @@
     public class FacilityDTO
     {
         public int FacilityId { get; set; }
-        public string Name { get; set; } = null!;
+        public string Type { get; set; } = null!;
         public int MaxReservationHours { get; set; }
         public int MinReservationHours { get; set; }
         public int CancellationHours { get; set; }

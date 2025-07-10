@@ -5,26 +5,31 @@ namespace SportsCenterApi.Repositories
 {
     public class ReservationRepository : GenericRespository<Reservation>, IReservationRepository
     {
-        private readonly SportsCenterContext _context;
 
         public ReservationRepository(SportsCenterContext context) : base(context)
         {
-            _context = context;
+           
         }
 
-        public async Task<IEnumerable<Reservation>> GetByDateReservationAsync(DateOnly startDate, DateOnly endDate)
+        public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, DateOnly? startDate, DateOnly? endDate)
         {
-            return await _context.Reservations
-                .Where(r => r.ReservationDate >= startDate && r.ReservationDate <= endDate)
-                .ToListAsync();
+            var query = _context.Reservations.AsQueryable();
+
+            if (userId.HasValue)
+            {
+                query = query.Where(r => r.UserId == userId);
+            }
+
+            if(startDate.HasValue && endDate.HasValue)
+            {
+                query = query.Where(r => r.ReservationDate >= startDate && r.ReservationDate <= endDate);
+            }
+
+            return await query.ToListAsync();
+
         }
 
-        public async Task<IEnumerable<Reservation>> GetByUserIdAsync(int userId)
-        {
-            return await _context.Reservations
-                .Where(r => r.UserId == userId)
-                .ToListAsync();
-        }
 
+       
     }
 }

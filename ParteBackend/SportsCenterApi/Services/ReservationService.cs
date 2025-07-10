@@ -12,14 +12,9 @@ namespace SportsCenterApi.Services
             _reservationRepository = reservationRepository;
         }
 
-        public async Task<IEnumerable<Reservation>> GetByDateReservationAsync(DateOnly startDate, DateOnly endDate)
+        public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, DateOnly? startDate, DateOnly? endDate)
         {
-            return await _reservationRepository.GetByDateReservationAsync(startDate, endDate);
-        }
-
-        public async Task<IEnumerable<Reservation>> GetByUserIdAsync(int userId)
-        {
-            return await _reservationRepository.GetByUserIdAsync(userId);
+            return await _reservationRepository.FilterReservationsAsync(userId, startDate, endDate);
         }
     }
 }

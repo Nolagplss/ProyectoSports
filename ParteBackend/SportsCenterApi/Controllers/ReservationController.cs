@@ -26,22 +26,16 @@ namespace SportsCenterApi.Controllers
 
         }
 
-        [HttpGet("by-user/{userId}")]
-        public async Task<IActionResult> GetByUserId(int userId)
+        [HttpGet("filter")]
+        public async Task<IActionResult> FilterReservations([FromQuery] int? userId, [FromQuery] DateOnly? startDate, [FromQuery] DateOnly? endDate)
         {
-            return Ok(await _reservationService.GetByUserIdAsync(userId));
-        }
-
-        [HttpGet("by-date")]
-        public async Task<IActionResult> GetByDateReservationsAsync([FromQuery] DateOnly startDate, [FromQuery] DateOnly endDate)
-        {
-            if (startDate > endDate)
-            {
+            if (startDate.HasValue && endDate.HasValue && startDate > endDate)
                 return BadRequest("Start date cannot be after end date.");
-            }
 
-            return Ok(await _reservationService.GetByDateReservationAsync(startDate, endDate));
+            var reservations = await _reservationService.FilterReservationsAsync(userId, startDate, endDate);
+            return Ok(reservations);
         }
+
 
         [HttpPost]
         public async Task<IActionResult> CreateReservation([FromBody] ReservationCreateDto dto)
