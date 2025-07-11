@@ -40,5 +40,31 @@ namespace SportsCenterApi.Services
             return await _userRepository.AuthenticateAsync(email, password);
 
         }
+
+        public async Task<bool> ChangePasswordAsync(int userId, string currentPassword, string newPassword)
+        {
+            //Get the current user
+            var user = await _userRepository.GetByIdAsync(userId);
+
+            if(user == null)
+            {
+                throw new ArgumentException("User not found");
+            }
+            if(user.Password != currentPassword)
+            {
+                throw new UnauthorizedAccessException("Current password is incorrect");
+            }
+
+            //Assign the new password to the current user;
+            user.Password = newPassword;
+
+            await _userRepository.UpdateAsync(user);
+
+            return true;
+
+        }
+
+
+
     }
 }

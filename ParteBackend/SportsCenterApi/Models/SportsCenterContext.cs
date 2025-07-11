@@ -39,7 +39,7 @@ public partial class SportsCenterContext : DbContext
         modelBuilder.Entity<Facility>(entity =>
         {
             entity.HasKey(e => e.FacilityId).HasName("facilities_pkey");
-
+          
             entity.Property(e => e.CancellationHours).HasDefaultValue(1);
             entity.Property(e => e.MinReservationHours).HasDefaultValue(1);
         });

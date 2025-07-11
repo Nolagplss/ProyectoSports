@@ -17,6 +17,9 @@ public partial class FacilitySchedule
     [Column("facility_id")]
     public int FacilityId { get; set; }
 
+    [Column("day_of_week")]
+    public string Day_of_Week { get; set; } = null!;
+
     [Column("opening_time")]
     public TimeOnly OpeningTime { get; set; }
 

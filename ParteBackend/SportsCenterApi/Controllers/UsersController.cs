@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using SportsCenterApi.Models;
 using SportsCenterApi.Services;
 using SportsCenterApi.Models.DTO;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace SportsCenterApi.Controllers
 {
@@ -85,6 +87,64 @@ namespace SportsCenterApi.Controllers
                 return NotFound();
 
             return NoContent();
+        }
+
+        [Authorize]
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword(
+          
+            ChangePasswordDTO dto)
+        {
+
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userIdClaim == null)
+                return Unauthorized();
+
+            int userId = int.Parse(userIdClaim);
+
+            //Now we use the userId to change the password
+            var result = await _userService.ChangePasswordAsync(userId, dto.CurrentPassword, dto.NewPassword);
+
+            if (!result)
+                return BadRequest("Current password is incorrect.");
+
+            return Ok("Password changed successfully.");
+        }
+
+        [Authorize]
+        [HttpPost("{id}/change-password")]
+        public async Task<IActionResult> ChangeOthersPassword(
+            int id,
+            [FromBody] ChangePasswordDTO dto)
+        {
+
+            //Get the currentUser
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userIdClaim == null)
+                return Unauthorized();
+
+            //Parse the id to int
+            int userId = int.Parse(userIdClaim);
+
+            //Find the permissions
+            var userPermissions = User.FindAll("permission").Select(c => c.Value).ToList();
+
+            if (id != userId && !userPermissions.Contains("CHANGE_OTHERS_PASSWORD"))
+            {
+                return Forbid("You do not have permission to change other users passwords.");
+            }
+            
+            //Change the password
+            var success = await _userService.ChangePasswordAsync(id, dto.CurrentPassword, dto.NewPassword);
+
+            if (!success)
+            {
+                return Forbid("User not fount");
+            }
+
+            return Ok("Password changed successfully.");
+
+
         }
     }
 }

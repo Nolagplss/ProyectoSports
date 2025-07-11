@@ -3,12 +3,120 @@
   "WorkspaceRootPath": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\controllers\\facilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:controllers\\facilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\extensions\\facilityextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:extensions\\facilityextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\facilityschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\facilityschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\facilityscheduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\facilityscheduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\facilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\facilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\reservationcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\reservationcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\facilitierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\facilitierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\facilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\facilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\sportscentercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\sportscentercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\facility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\facility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\ifacilitiesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\ifacilitiesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\ifacilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\ifacilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\ireservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,120 +135,16 @@
       "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\reservationcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\reservationcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\controllers\\facilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:controllers\\facilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\ifacilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\ifacilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\facilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\facilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\extensions\\facilityextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:extensions\\facilityextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\facilitierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\facilitierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\facilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\facilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\facility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\facility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\facilityscheduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\facilityscheduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\ifacilitiesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\ifacilitiesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\facilityschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\facilityschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\repositories\\genericrespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:repositories\\genericrespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\models\\sportscentercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|solutionrelative:models\\sportscentercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84989817-76FF-4581-ABF1-B650B2333054}|SportsCenterApi.csproj|c:\\users\\holak\\desktop\\di\\proyectosportscenter\\partebackend\\sportscenterapi\\services\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -198,85 +202,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IReservationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IReservationRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IReservationRepository.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IReservationRepository.cs",
-              "RelativeToolTip": "Repositories\\IReservationRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "FacilityDTO.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\FacilityDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\FacilityDTO.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\FacilityDTO.cs",
+              "RelativeToolTip": "Models\\DTO\\FacilityDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T07:07:50.027Z",
+              "WhenOpened": "2025-07-09T08:49:03.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ReservationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\ReservationRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ReservationRepository.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\ReservationRepository.cs",
-              "RelativeToolTip": "Repositories\\ReservationRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwAwAAAAAAAAAAAAAAA==",
+              "Title": "FacilityScheduleDTO.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\FacilityScheduleDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\FacilityScheduleDTO.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\FacilityScheduleDTO.cs",
+              "RelativeToolTip": "Models\\DTO\\FacilityScheduleDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T07:09:27.166Z",
+              "WhenOpened": "2025-07-09T08:49:30.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FacilitySchedule.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\FacilitySchedule.cs",
+              "RelativeDocumentMoniker": "Models\\FacilitySchedule.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\FacilitySchedule.cs",
+              "RelativeToolTip": "Models\\FacilitySchedule.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvxQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T07:56:14.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IReservationService.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IReservationService.cs",
-              "RelativeDocumentMoniker": "Services\\IReservationService.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IReservationService.cs",
-              "RelativeToolTip": "Services\\IReservationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T07:21:45.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReservationService.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\ReservationService.cs",
-              "RelativeDocumentMoniker": "Services\\ReservationService.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\ReservationService.cs",
-              "RelativeToolTip": "Services\\ReservationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T07:22:28.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "ReservationController.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\ReservationController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReservationController.cs",
               "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\ReservationController.cs",
               "RelativeToolTip": "Controllers\\ReservationController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCgAAABfAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwH8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T07:24:42.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Reservation.cs",
-              "RelativeDocumentMoniker": "Models\\Reservation.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Reservation.cs",
-              "RelativeToolTip": "Models\\Reservation.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAwwCkAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FacilitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\FacilitiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FacilitiesController.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\FacilitiesController.cs",
+              "RelativeToolTip": "Controllers\\FacilitiesController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T07:56:30.19Z",
+              "WhenOpened": "2025-07-09T08:18:48.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FacilityExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Extensions\\FacilityExtensions.cs",
+              "RelativeDocumentMoniker": "Extensions\\FacilityExtensions.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Extensions\\FacilityExtensions.cs",
+              "RelativeToolTip": "Extensions\\FacilityExtensions.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAawBUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T07:34:24.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "ChangePasswordDTO.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\ChangePasswordDTO.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\ChangePasswordDTO.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\ChangePasswordDTO.cs",
+              "RelativeToolTip": "Models\\DTO\\ChangePasswordDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:16:29.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ReservationCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\ReservationCreateDto.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\ReservationCreateDto.cs",
@@ -289,46 +306,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAowCkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T07:55:53.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "FacilitiesController.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\FacilitiesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FacilitiesController.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\FacilitiesController.cs",
-              "RelativeToolTip": "Controllers\\FacilitiesController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwB0AAAAsAAAAAAAAAA==",
+              "Title": "FacilitieRepository.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\FacilitieRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\FacilitieRepository.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\FacilitieRepository.cs",
+              "RelativeToolTip": "Repositories\\FacilitieRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T08:18:48.689Z",
+              "WhenOpened": "2025-07-09T07:49:14.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FacilityExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Extensions\\FacilityExtensions.cs",
-              "RelativeDocumentMoniker": "Extensions\\FacilityExtensions.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Extensions\\FacilityExtensions.cs",
-              "RelativeToolTip": "Extensions\\FacilityExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T07:34:24.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "FacilityService.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\FacilityService.cs",
               "RelativeDocumentMoniker": "Services\\FacilityService.cs",
@@ -342,109 +333,162 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA6wB4AAAAAAAAAAAAAAA==",
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\LoginDto.cs",
+              "RelativeToolTip": "Models\\DTO\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:11:27.62Z",
+              "WhenOpened": "2025-06-30T15:23:08.961Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FacilitieRepository.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\FacilitieRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\FacilitieRepository.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\FacilitieRepository.cs",
-              "RelativeToolTip": "Repositories\\FacilitieRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T07:49:14.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IFacilityService.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IFacilityService.cs",
-              "RelativeDocumentMoniker": "Services\\IFacilityService.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IFacilityService.cs",
-              "RelativeToolTip": "Services\\IFacilityService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T07:54:09.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FacilityDTO.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\FacilityDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTO\\FacilityDTO.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\FacilityDTO.cs",
-              "RelativeToolTip": "Models\\DTO\\FacilityDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T08:49:03.209Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 11,
               "Title": "Facility.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Facility.cs",
               "RelativeDocumentMoniker": "Models\\Facility.cs",
               "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Facility.cs",
               "RelativeToolTip": "Models\\Facility.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-26T07:55:07.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FacilityScheduleDTO.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\FacilityScheduleDTO.cs",
-              "RelativeDocumentMoniker": "Models\\DTO\\FacilityScheduleDTO.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\FacilityScheduleDTO.cs",
-              "RelativeToolTip": "Models\\DTO\\FacilityScheduleDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "SportsCenterContext.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\SportsCenterContext.cs",
+              "RelativeDocumentMoniker": "Models\\SportsCenterContext.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\SportsCenterContext.cs",
+              "RelativeToolTip": "Models\\SportsCenterContext.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAmwGQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T08:49:30.689Z",
+              "WhenOpened": "2025-06-26T07:56:39.454Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
+              "Title": "UserCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\UserCreateDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\UserCreateDto.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\UserCreateDto.cs",
+              "RelativeToolTip": "Models\\DTO\\UserCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T09:07:36.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T07:49:58.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-26T07:57:17.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Models\\Role.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Role.cs",
+              "RelativeToolTip": "Models\\Role.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T07:56:36.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "IFacilitiesRepository.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IFacilitiesRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IFacilitiesRepository.cs",
               "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IFacilitiesRepository.cs",
               "RelativeToolTip": "Repositories\\IFacilitiesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAACAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T07:49:01.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IUserService.cs",
-              "RelativeDocumentMoniker": "Services\\IUserService.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IUserService.cs",
-              "RelativeToolTip": "Services\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:48:10.913Z"
+              "WhenOpened": "2025-06-28T07:55:53.409Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T08:11:27.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T15:40:13.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IFacilityService.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IFacilityService.cs",
+              "RelativeDocumentMoniker": "Services\\IFacilityService.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IFacilityService.cs",
+              "RelativeToolTip": "Services\\IFacilityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T07:54:09.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
@@ -456,31 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\UserCreateDto.cs",
-              "RelativeDocumentMoniker": "Models\\DTO\\UserCreateDto.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\UserCreateDto.cs",
-              "RelativeToolTip": "Models\\DTO\\UserCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T09:07:36.152Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IUserRepository.cs",
-              "RelativeToolTip": "Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:43:56.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IGenericRepository.cs",
@@ -492,91 +512,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "FacilitySchedule.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\FacilitySchedule.cs",
-              "RelativeDocumentMoniker": "Models\\FacilitySchedule.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\FacilitySchedule.cs",
-              "RelativeToolTip": "Models\\FacilitySchedule.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAADwvxEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T07:56:14.819Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "GenericService.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\GenericService.cs",
-              "RelativeDocumentMoniker": "Services\\GenericService.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\GenericService.cs",
-              "RelativeToolTip": "Services\\GenericService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowBwAAABDAAAAAAAAAA==",
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IUserService.cs",
+              "RelativeToolTip": "Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T08:22:16.963Z"
+              "WhenOpened": "2025-06-26T08:48:10.913Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T07:49:58.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T15:40:13.339Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "GenericRespository.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\GenericRespository.cs",
-              "RelativeDocumentMoniker": "Repositories\\GenericRespository.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\GenericRespository.cs",
-              "RelativeToolTip": "Repositories\\GenericRespository.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwDgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T08:27:13.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Models\\DTO\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\DTO\\LoginDto.cs",
-              "RelativeToolTip": "Models\\DTO\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T15:23:08.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\TokenService.cs",
-              "RelativeToolTip": "Services\\TokenService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwCcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T15:24:40.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
               "Title": "ItokenService.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\ItokenService.cs",
               "RelativeDocumentMoniker": "Services\\ItokenService.cs",
@@ -588,31 +536,115 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-26T07:57:17.958Z"
+              "DocumentIndex": 26,
+              "Title": "ReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\ReservationService.cs",
+              "RelativeDocumentMoniker": "Services\\ReservationService.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\ReservationService.cs",
+              "RelativeToolTip": "Services\\ReservationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T07:22:28.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\TokenService.cs",
+              "RelativeToolTip": "Services\\TokenService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA8wCcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T15:24:40.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T08:43:56.759Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "Models\\Role.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Role.cs",
-              "RelativeToolTip": "Models\\Role.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "Models\\Reservation.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Reservation.cs",
+              "RelativeToolTip": "Models\\Reservation.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T07:56:36.983Z"
+              "WhenOpened": "2025-06-26T07:56:30.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IReservationService.cs",
+              "RelativeDocumentMoniker": "Services\\IReservationService.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IReservationService.cs",
+              "RelativeToolTip": "Services\\IReservationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T07:21:45.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\ReservationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ReservationRepository.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\ReservationRepository.cs",
+              "RelativeToolTip": "Repositories\\ReservationRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T07:09:27.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IReservationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IReservationRepository.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\IReservationRepository.cs",
+              "RelativeToolTip": "Repositories\\IReservationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T07:07:50.027Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
+              "Title": "GenericService.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\GenericService.cs",
+              "RelativeDocumentMoniker": "Services\\GenericService.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\GenericService.cs",
+              "RelativeToolTip": "Services\\GenericService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAowBwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T08:22:16.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GenericRespository.cs",
+              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\GenericRespository.cs",
+              "RelativeDocumentMoniker": "Repositories\\GenericRespository.cs",
+              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Repositories\\GenericRespository.cs",
+              "RelativeToolTip": "Repositories\\GenericRespository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwDgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T08:27:13.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "Permission.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Permission.cs",
               "RelativeDocumentMoniker": "Models\\Permission.cs",
@@ -624,19 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "SportsCenterContext.cs",
-              "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\SportsCenterContext.cs",
-              "RelativeDocumentMoniker": "Models\\SportsCenterContext.cs",
-              "ToolTip": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\SportsCenterContext.cs",
-              "RelativeToolTip": "Models\\SportsCenterContext.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T07:56:39.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "IGenericService.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Services\\IGenericService.cs",
               "RelativeDocumentMoniker": "Services\\IGenericService.cs",
@@ -648,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "Member.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\Member.cs",
               "RelativeDocumentMoniker": "Models\\Member.cs",
@@ -660,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "SportsCenterApi.csproj",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\SportsCenterApi.csproj",
               "RelativeDocumentMoniker": "SportsCenterApi.csproj",
@@ -672,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -684,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -696,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\holak\\Desktop\\DI\\ProyectoSportsCenter\\ParteBackend\\SportsCenterApi\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",

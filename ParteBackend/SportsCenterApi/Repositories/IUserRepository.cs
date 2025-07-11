@@ -7,5 +7,7 @@ namespace SportsCenterApi.Repositories
         Task<User?> GetByEmailAsync(string email);
         Task<User?> AuthenticateAsync(string email, string password);
 
+
+
     }
 }
