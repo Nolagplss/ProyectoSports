@@ -1,4 +1,5 @@
 ﻿using SportsCenterApi.Models;
+using System.Security.Claims;
 
 namespace SportsCenterApi.Services
 {
@@ -6,6 +7,10 @@ namespace SportsCenterApi.Services
     {
 
         Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, DateOnly? startDate, DateOnly? endDate);
+
+        Task<Reservation> CreateReservationWithValidationAsync(Reservation reservation, ClaimsPrincipal user);
+
+
 
     }
 }

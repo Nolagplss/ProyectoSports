@@ -36,7 +36,7 @@ namespace SportsCenterApi.Controllers
             return Ok(reservations);
         }
 
-
+        [Authorize(Policy = "MakeReservations")]
         [HttpPost]
         public async Task<IActionResult> CreateReservation([FromBody] ReservationCreateDto dto)
         {
@@ -67,7 +67,10 @@ namespace SportsCenterApi.Controllers
                 NoShow = false
             };
 
-            return Ok(await _reservationService.CreateAsync(reservation));
+            var createdReservation = await _reservationService.CreateReservationWithValidationAsync(reservation, User);
+
+
+            return Ok(createdReservation);
         }
 
        

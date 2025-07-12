@@ -29,7 +29,28 @@ namespace SportsCenterApi.Repositories
 
         }
 
+        public async Task<bool> HasActiveReservationAsync(int userId, int facilityId, DateOnly fromDate)
+        {
+            return await _context.Reservations.AnyAsync(r =>
+                r.UserId == userId &&
+                r.FacilityId == facilityId &&
+                r.ReservationDate >= fromDate);
+        }
 
-       
+        public async Task<Facility?> GetFacilityByIdAsync(int facilityId)
+        {
+            return await _context.Facilities.FindAsync(facilityId);
+        }
+
+        public async Task<User?> GetUserByIdAsync(int userId)
+        {
+            return await _context.Users
+                .Include(u => u.Role)
+                .Include(u => u.Member)
+                .FirstOrDefaultAsync(u => u.UserId == userId);
+        }
+
+
+
     }
 }
