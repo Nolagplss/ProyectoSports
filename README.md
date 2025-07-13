@@ -114,7 +114,7 @@ dotnet run
 5. Visit Swagger UI in your browser:
 https://localhost:{your-port}/swagger
 
-📌 Current Status
+## 📌 Current Status
 ✅ Basic features complete  
 🛠️ Advanced validation **in progress**  
 🧪 Tests **in progress**  
