@@ -40,6 +40,9 @@ namespace SportsCenterApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateReservation([FromBody] ReservationCreateDto dto)
         {
+
+
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -55,6 +58,16 @@ namespace SportsCenterApi.Controllers
             if (parsedEnd <= parsedStart)
                 return BadRequest("End time must be later than start time.");
 
+            //Validation for 
+            var userPermissions = User.FindAll("permission").Select(p => p.Value).ToList();
+            var isAdmin = userPermissions.Contains("RESERVE_UNLIMITED");
+
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userIdClaim == null)
+                return Unauthorized();
+
+            int currentUserId = int.Parse(userIdClaim);
+
 
             var reservation = new Reservation
             {
@@ -67,10 +80,25 @@ namespace SportsCenterApi.Controllers
                 NoShow = false
             };
 
-            var createdReservation = await _reservationService.CreateReservationWithValidationAsync(reservation, User);
+            try
+            {
+                //Only can make reservations by their self
+                if (!isAdmin && dto.UserId != currentUserId)
+                {
+                    return Forbid("You can only make reservations for yourself.");
+                }
+                //Create reservation with validation
+                var createdReservation = await _reservationService.CreateReservationWithValidationAsync(reservation, isAdmin);
 
+                return Ok(createdReservation);
 
-            return Ok(createdReservation);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+           
         }
 
        
@@ -103,6 +131,11 @@ namespace SportsCenterApi.Controllers
             {
                 //Can cancell their own reservation
                 await _reservationService.DeleteAsync(id);
+
+                //Penalize
+                await _reservationService.PenalizeMemberIfLateCancellationAsync(reservation);
+
+
                 return NoContent();
             }
 

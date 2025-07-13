@@ -8,8 +8,9 @@ namespace SportsCenterApi.Services
 
         Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, DateOnly? startDate, DateOnly? endDate);
 
-        Task<Reservation> CreateReservationWithValidationAsync(Reservation reservation, ClaimsPrincipal user);
+        Task<Reservation> CreateReservationWithValidationAsync(Reservation reservation, bool isAdmin);
 
+        Task PenalizeMemberIfLateCancellationAsync(Reservation reservation);
 
 
     }

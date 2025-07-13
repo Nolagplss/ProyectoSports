@@ -18,10 +18,9 @@ namespace SportsCenterApi.Services
             return await _reservationRepository.FilterReservationsAsync(userId, startDate, endDate);
         }
 
-        public async Task<Reservation> CreateReservationWithValidationAsync(Reservation reservation, ClaimsPrincipal user)
+        public async Task<Reservation> CreateReservationWithValidationAsync(Reservation reservation, bool isAdmin)
         {
-            var userPermissions = user.FindAll("permission").Select(p => p.Value).ToList();
-            var isAdmin = userPermissions.Contains("RESERVE_UNLIMITED");
+           
 
             if (!isAdmin)
             {
@@ -76,5 +75,37 @@ namespace SportsCenterApi.Services
             return await _reservationRepository.AddAsync(reservation);
         }
 
+
+        public async Task PenalizeMemberIfLateCancellationAsync(Reservation reservation)
+        {
+            //Take the user with that reservation
+            var user = await _reservationRepository.GetUserByIdAsync(reservation.UserId);
+
+            //Return if isn't a member
+            if (user?.Role?.RoleName != "Member" || user.Member == null)
+                return;
+
+            //Time now
+            var nowTimeOnly = TimeOnly.FromDateTime(DateTime.Now);
+            // Reservation start time
+            var dateReservationStartTime = reservation.StartTime;
+
+            var dateTimeNow = DateTime.Now;
+
+            if(nowTimeOnly.AddHours(1) > dateReservationStartTime)
+            {
+                //Penalize the member
+                user.Member.Penalized = true;
+
+                user.Member.PenaltyEndDate = DateOnly.FromDateTime(dateTimeNow);
+
+                await _reservationRepository.SaveChangesAsync();
+
+            }
+
+
+            
+
+        }
     }
 }
