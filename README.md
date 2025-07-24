@@ -128,7 +128,7 @@ https://localhost:{your-port}/swagger
 🐳 Dockerization **in progress**  
 ☁️ Cloud deployment (AWS) **in progress**
 
-📃 License
+## 📃 License
 This code was developed by **Samuel Radu Dragomir** and is part of my personal portfolio.  
 It is shared publicly for **demonstration and educational purposes only**.  
 **Commercial use, redistribution, or repackaging is strictly prohibited.**
