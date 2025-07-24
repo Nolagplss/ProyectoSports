@@ -95,6 +95,13 @@ All endpoints are available and testable via Swagger (`/swagger`):
 - `POST /api/reservation` → Create a new reservation (with permission)
 - `DELETE /api/reservation/{id}` → Cancel reservation (based on permission and rules)
 
+### 🛡️ Role
+- `GET /api/role` → Get all roles (Administrator only)
+- `GET /api/role/{id}` → Get role by ID (Administrator only)
+- `POST /api/role` → Create a new role (Administrator only)
+- `PUT /api/role/{id}` → Update an existing role (Administrator only)
+- `DELETE /api/role/{id}` → Delete a role (Administrator only)
+
 ---
 
 ## 🧪 How to Run
