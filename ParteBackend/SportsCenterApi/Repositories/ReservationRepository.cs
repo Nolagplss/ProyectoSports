@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using SportsCenterApi.Models;
 
 namespace SportsCenterApi.Repositories
@@ -11,19 +12,36 @@ namespace SportsCenterApi.Repositories
            
         }
 
-        public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, DateOnly? startDate, DateOnly? endDate)
+        public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, string? facilityType, string? facilityName, DateOnly? startDate, DateOnly? endDate)
         {
             var query = _context.Reservations.AsQueryable();
 
+            //Filter by id
             if (userId.HasValue)
             {
                 query = query.Where(r => r.UserId == userId);
             }
 
+            //Filter by date
             if(startDate.HasValue && endDate.HasValue)
             {
                 query = query.Where(r => r.ReservationDate >= startDate && r.ReservationDate <= endDate);
             }
+
+            //Filter by type
+            if(!string.IsNullOrEmpty(facilityType))
+            {
+                query = query.Include(r => r.Facility)
+                    .Where(r => r.Facility.Type == facilityType);
+            }
+
+            //Filter by Name
+            if (!string.IsNullOrEmpty(facilityName))
+            {
+                query = query.Include(r => r.Facility)
+                    .Where(r => r.Facility.Name == facilityName);
+            }
+            
 
             return await query.ToListAsync();
 

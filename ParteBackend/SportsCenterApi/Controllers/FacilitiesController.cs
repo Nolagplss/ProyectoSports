@@ -43,7 +43,7 @@ namespace SportsCenterApi.Controllers
             var dto = facility.ToFacilityDto();
             return Ok(dto);
         }
-
+            
         [Authorize(Roles = "Facility Manager,Administrator")]
         [HttpPost]
         public async Task<ActionResult<Facility>> CreateFacility([FromBody] FacilityDTO dto)

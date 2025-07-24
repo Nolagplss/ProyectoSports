@@ -36,7 +36,7 @@ namespace SportsCenterApi.Repositories
         {
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
-            return entity;
+            return entity;  
         }
 
         public async Task<bool> DeleteAsync(int id)

@@ -5,7 +5,7 @@ namespace SportsCenterApi.Repositories
 {
     public interface IReservationRepository : IGenericRepository<Reservation>
     {
-        Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, DateOnly? startDate, DateOnly? endDate);
+        Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, string? facilityType, string? facilityName, DateOnly? startDate, DateOnly? endDate);
 
 
         Task<bool> HasActiveReservationAsync(int userId, int facilityId, DateOnly fromDate);

@@ -27,12 +27,13 @@ namespace SportsCenterApi.Controllers
         }
 
         [HttpGet("filter")]
-        public async Task<IActionResult> FilterReservations([FromQuery] int? userId, [FromQuery] DateOnly? startDate, [FromQuery] DateOnly? endDate)
+        public async Task<IActionResult> FilterReservations(
+            [FromQuery] int? userId, [FromQuery] string? facilityType, [FromQuery] string? facilityName, [FromQuery] DateOnly? startDate, [FromQuery] DateOnly? endDate)
         {
             if (startDate.HasValue && endDate.HasValue && startDate > endDate)
                 return BadRequest("Start date cannot be after end date.");
 
-            var reservations = await _reservationService.FilterReservationsAsync(userId, startDate, endDate);
+            var reservations = await _reservationService.FilterReservationsAsync(userId, facilityType, facilityName, startDate, endDate);
             return Ok(reservations);
         }
 
@@ -162,6 +163,26 @@ namespace SportsCenterApi.Controllers
 
           
             return Forbid();
+        }
+
+
+        [Authorize]
+        [HttpPost("reservations/{id}/noshow")]
+        public async Task<IActionResult> MarkNoShow(int id)
+        {
+
+            try
+            {
+                await _reservationService.MarkNoShowAsync(id);
+
+                return Ok(new { Message = "Reservation changed to NoShow" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Error = ex.Message });
+            }
+
+
         }
 
     }

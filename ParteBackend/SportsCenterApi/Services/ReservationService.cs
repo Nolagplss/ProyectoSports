@@ -13,9 +13,9 @@ namespace SportsCenterApi.Services
             _reservationRepository = reservationRepository;
         }
 
-        public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, DateOnly? startDate, DateOnly? endDate)
+        public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, string? facilityType, string? facilityName, DateOnly? startDate, DateOnly? endDate)
         {
-            return await _reservationRepository.FilterReservationsAsync(userId, startDate, endDate);
+            return await _reservationRepository.FilterReservationsAsync(userId,facilityType, facilityName, startDate, endDate);
         }
 
         public async Task<Reservation> CreateReservationWithValidationAsync(Reservation reservation, bool isAdmin)
@@ -105,6 +105,25 @@ namespace SportsCenterApi.Services
 
 
             
+
+        }
+
+
+        public async Task MarkNoShowAsync(int reservationId)
+        {
+
+            //Get the reservation
+            var reservation = await _reservationRepository.GetByIdAsync(reservationId);
+
+            if (reservation == null)
+                throw new Exception("Reservation not found");
+
+            //True
+            reservation.NoShow = true;
+
+            //Update that reservation
+            await _reservationRepository.UpdateAsync(reservation);
+
 
         }
     }
