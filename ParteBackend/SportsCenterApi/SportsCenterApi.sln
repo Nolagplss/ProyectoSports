@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsCenterApi", "SportsCenterApi.csproj", "{84989817-76FF-4581-ABF1-B650B2333054}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportsCenterApi", "SportsCenterApi.csproj", "{84989817-76FF-4581-ABF1-B650B2333054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsCenterTest", "..\SportsCenterTest\SportsCenterTest.csproj", "{8D81092F-1715-4E4A-AC40-85C695544C9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{84989817-76FF-4581-ABF1-B650B2333054}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84989817-76FF-4581-ABF1-B650B2333054}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84989817-76FF-4581-ABF1-B650B2333054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D81092F-1715-4E4A-AC40-85C695544C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D81092F-1715-4E4A-AC40-85C695544C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D81092F-1715-4E4A-AC40-85C695544C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D81092F-1715-4E4A-AC40-85C695544C9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
