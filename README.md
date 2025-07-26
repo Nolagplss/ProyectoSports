@@ -123,11 +123,11 @@ https://localhost:{your-port}/swagger
 
 ## 📌 Current Status
 ✅ Basic features complete  
-🛠️ Advanced validation complete 
-🧪 Automated tests implemented using xUnit
-📄 Fully documented with Swagger UI for interactive testing
-🐳 Dockerization **in progress**  
-☁️ Cloud deployment (AWS) **in progress**
+🛠️ Advanced validation complete  
+🧪 Automated tests implemented using xUnit  
+📄 Fully documented with Swagger UI for interactive testing  
+🐳 Dockerization in progress  
+
 
 ## 📃 License
 This code was developed by **Samuel Radu Dragomir** and is part of my personal portfolio.  
