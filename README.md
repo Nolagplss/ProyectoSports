@@ -95,6 +95,13 @@ All endpoints are available and testable via Swagger (`/swagger`):
 - `POST /api/reservation` → Create a new reservation (with permission)
 - `DELETE /api/reservation/{id}` → Cancel reservation (based on permission and rules)
 
+### 🛡️ Role
+- `GET /api/role` → Get all roles (Administrator only)
+- `GET /api/role/{id}` → Get role by ID (Administrator only)
+- `POST /api/role` → Create a new role (Administrator only)
+- `PUT /api/role/{id}` → Update an existing role (Administrator only)
+- `DELETE /api/role/{id}` → Delete a role (Administrator only)
+
 ---
 
 ## 🧪 How to Run
@@ -116,14 +123,15 @@ https://localhost:{your-port}/swagger
 
 ## 📌 Current Status
 ✅ Basic features complete  
-🛠️ Advanced validation **in progress**  
-🧪 Tests **in progress**  
+🛠️ Advanced validation complete 
+🧪 Tests via swagger. **xUnit in progress**
 🐳 Dockerization **in progress**  
 ☁️ Cloud deployment (AWS) **in progress**
 
-📃 License
-MIT License.
-Developed by Samuel Radu Dragomir.
+## 📃 License
+This code was developed by **Samuel Radu Dragomir** and is part of my personal portfolio.  
+It is shared publicly for **demonstration and educational purposes only**.  
+**Commercial use, redistribution, or repackaging is strictly prohibited.**
 
 💼 Open to Work 🚀
 This project is part of my professional portfolio. I'm actively looking for new opportunities as a backend or full-stack developer.
