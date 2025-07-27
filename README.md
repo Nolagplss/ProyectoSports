@@ -7,7 +7,7 @@ This is a backend project in development for managing reservations in a sports f
 > - Automated testing
 > - Docker support
 > - Cloud deployment (AWS planned)  
-> Still, the app is **functional and fully testable via Swagger**.
+> Still, the app is **functional**.
 
 ---
 
@@ -123,10 +123,11 @@ https://localhost:{your-port}/swagger
 
 ## 📌 Current Status
 ✅ Basic features complete  
-🛠️ Advanced validation complete 
-🧪 Tests via swagger. **xUnit in progress**
-🐳 Dockerization **in progress**  
-☁️ Cloud deployment (AWS) **in progress**
+🛠️ Advanced validation complete  
+🧪 Automated tests implemented using xUnit  
+📄 Fully documented with Swagger UI for interactive testing  
+🐳 Dockerization in progress  
+
 
 ## 📃 License
 This code was developed by **Samuel Radu Dragomir** and is part of my personal portfolio.  
