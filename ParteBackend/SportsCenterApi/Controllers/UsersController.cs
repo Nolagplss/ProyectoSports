@@ -5,6 +5,7 @@ using SportsCenterApi.Services;
 using SportsCenterApi.Models.DTO;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using SportsCenterApi.Extensions;
 
 namespace SportsCenterApi.Controllers
 {
@@ -19,14 +20,14 @@ namespace SportsCenterApi.Controllers
         {
             _userService = userService;
         }
-
+        [Authorize(Roles = "Facility Manager,Administrator")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             var users = await _userService.GetAllAsync();
             return Ok(users);
         }
-
+        [Authorize(Roles = "Facility Manager,Administrator")]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
@@ -36,7 +37,7 @@ namespace SportsCenterApi.Controllers
 
             return Ok(user);
         }
-
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         public async Task<ActionResult<User>> CreateUser(UserCreateDto userDto)
         {
@@ -65,20 +66,20 @@ namespace SportsCenterApi.Controllers
             }
         }
 
-
+        [Authorize(Roles = "Administrator")]
         [HttpPut("{id}")]
-        public async Task<ActionResult<User>> UpdateUser(int id, User user)
+        public async Task<ActionResult<User>> UpdateUser(int id, UserDTO userDTO)
         {
-            if (id != user.UserId)
+            if (id != userDTO.UserId)
                 return BadRequest();
 
-            var updatedUser = await _userService.UpdateAsync(id, user);
+            var updatedUser = await _userService.UpdateAsyncUser(id, userDTO);
             if (updatedUser == null)
                 return NotFound();
 
             return Ok(updatedUser);
         }
-
+        [Authorize(Roles = "Administrator")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteUser(int id)  
         {
@@ -112,7 +113,7 @@ namespace SportsCenterApi.Controllers
         }
 
         [Authorize]
-        [HttpPost("{id}/change-password")]
+        [HttpPost("{id}/change-Others-password")]
         public async Task<IActionResult> ChangeOthersPassword(
             int id,
             [FromBody] ChangePasswordDTO dto)

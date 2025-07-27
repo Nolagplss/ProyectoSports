@@ -18,6 +18,12 @@ namespace SportsCenterApi.Controllers
             _tokenService = tokenService;
         }
 
+        /*
+         * --------------------Try with--------------------
+         * luis.garcia@email.com 1234 (Administrator), 
+         * pedro.martinez@email.com 12345 (Facility Manager), 
+         * juan.perez@email.com clave123(Member)
+        */
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {

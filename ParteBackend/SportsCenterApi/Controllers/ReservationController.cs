@@ -20,7 +20,7 @@ namespace SportsCenterApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllReservationsAsync()
+        public async Task<ActionResult<IEnumerable<Reservation>>> GetAllReservationsAsync()
         {
             return Ok(await _reservationService.GetAllAsync());
 

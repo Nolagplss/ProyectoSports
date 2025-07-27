@@ -5,7 +5,7 @@
 -- Dumped from database version 17.5
 -- Dumped by pg_dump version 17.5
 
--- Started on 2025-07-12 10:49:50
+-- Started on 2025-07-27 19:29:29
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -308,7 +308,7 @@ CREATE TABLE public.users (
     first_name character varying(30) NOT NULL,
     last_name character varying(60) NOT NULL,
     email character varying(100) NOT NULL,
-    password character varying(40) NOT NULL,
+    password character varying(100) NOT NULL,
     phone character varying(15),
     role_id integer NOT NULL
 );
@@ -537,6 +537,7 @@ COPY public.permissions (permission_id, description, code) FROM stdin;
 19	Have more than 1 active reservation	MULTI_ACTIVE_RESERVATIONS
 20	View administration menu	VIEW_ADMIN_MENU
 21	Unlimited reserve	RESERVE_UNLIMITED
+22	string	string
 \.
 
 
@@ -623,6 +624,8 @@ COPY public.role_permissions (role_id, permission_id) FROM stdin;
 2	20
 3	20
 3	21
+4	2
+4	3
 \.
 
 
@@ -636,6 +639,7 @@ COPY public.roles (role_id, role_name) FROM stdin;
 1	Member
 2	Facility Manager
 3	Administrator
+4	caca
 \.
 
 
@@ -646,15 +650,15 @@ COPY public.roles (role_id, role_name) FROM stdin;
 --
 
 COPY public.users (user_id, first_name, last_name, email, password, phone, role_id) FROM stdin;
-2	Pedro	Martínez Gómez	pedro.martinez@email.com	12345	610234567	2
-3	Laura	Hernández Pérez	laura.hernandez@email.com	encargado456	620345678	2
-4	Juan	Pérez Sánchez	juan.perez@email.com	clave123	600123456	1
-5	Ana	Gómez Ruiz	ana.gomez@email.com	segura456	611234567	1
-6	Carlos	Lopez Díaz	carlos.lopez@email.com	carlos789	622345678	1
-7	Sofia	Ramírez Martínez	sofia.ramirez@email.com	sofia987	633456789	1
-9	Laura	Martínez	laura@example.com	Segura123!	+34678901234	2
-1	Luis	García Márquez	luis.garcia@email.com	1234	600789456	3
-8	Luis	Fernández García	luis.fernandez@email.com	luis123	644567890	1
+1	Luis	García Márquez	luis.garcia@email.com	$2a$11$AhGwT7Qf2Z/UAGuCPSCmSOyzsFv/fh.SNZS/el5TteubI0Uj2E2Hu	600789456	3
+2	Pedro	Martínez Gómez	pedro.martinez@email.com	$2a$11$4RWK9AB2hQ3FSGBMptMakOR2kL3uB9Spm.5XieQa1vJUto4hVJa3y	610234567	2
+3	Laura	Hernández Pérez	laura.hernandez@email.com	$2a$11$Vuhl4PbHz.kSQsGPesBcQejyJIAL7MMb8L7G4z.KeB1SGCXiSYu5K	620345678	2
+4	Juan	Pérez Sánchez	juan.perez@email.com	$2a$11$IlcwWdw1Xmh474j.a2IxnesVgv.AUgjXz2zzHONa0fdsgQUjPGoIS	600123456	1
+5	Ana	Gómez Ruiz	ana.gomez@email.com	$2a$11$fEcJ.mnaUWBAqUrKevi6vuRGsU2vFJDbPIcY5cgHyCQV8FRkNjwEO	611234567	1
+6	Carlos	Lopez Díaz	carlos.lopez@email.com	$2a$11$sDvQOQmyMk648z9vVcI5i.NUM5Xnonx78HqANGh.aXnISHgE0o5v6	622345678	1
+7	Sofia	Ramírez Martínez	sofia.ramirez@email.com	$2a$11$VX5jiPghOzF.rnhWNeqm8eOL7MGytFHUA5kyebQSDFT04J5/b.Yy.	633456789	1
+8	Pablito2	PablitoPro	proplayer@pro.com	$2a$11$Jg.uhm/TRYZHE6TnO3eBh.o5E.Mu48eiAEhsGxkxuM7Nd8OAAa/lu	234234	1
+9	Laura	Martínez	laura@example.com	$2a$11$78oW.A/i5wtHstCtJsEFdO53OIgidiWjxj2LSe3ljpf/wMwGM8vbm	+34678901234	2
 \.
 
 
@@ -682,7 +686,7 @@ SELECT pg_catalog.setval('public.facility_schedules_schedule_id_seq', 73, true);
 -- Name: permissions_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.permissions_permission_id_seq', 21, true);
+SELECT pg_catalog.setval('public.permissions_permission_id_seq', 22, true);
 
 
 --
@@ -921,7 +925,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT fk_users_role FOREIGN KEY (role_id) REFERENCES public.roles(role_id) ON DELETE RESTRICT;
 
 
--- Completed on 2025-07-12 10:49:50
+-- Completed on 2025-07-27 19:29:29
 
 --
 -- PostgreSQL database dump complete

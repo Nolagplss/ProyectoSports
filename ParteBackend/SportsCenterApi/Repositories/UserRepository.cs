@@ -18,11 +18,42 @@ namespace SportsCenterApi.Repositories
 
         public async Task<User?> AuthenticateAsync(string email, string password)
         {
-            return await _context.Users
+            var user = await _context.Users
                 .Include(u => u.Role)
                 .ThenInclude(r => r.Permissions)
-                .FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
+                .FirstOrDefaultAsync(u => u.Email == email);
+
+            if (user == null)
+                return null;
+
+            bool passwordMatches = BCrypt.Net.BCrypt.Verify(password, user.Password);
+            if (!passwordMatches)
+                return null;
+
+            return user;    
         }
 
+        public async Task<bool> ExistsAsync(int id)
+        {
+            return await _context.Users.AnyAsync(r => r.UserId == id);
+        }
+
+        //Update the role
+        public async Task<User?> UpdateAsyncUser(User user)
+        {
+            _context.Entry(user).State = EntityState.Modified;
+            try
+            {
+                await _context.SaveChangesAsync();
+                return user;
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!await ExistsAsync(user.UserId))
+                    return null;
+                throw;
+            }
+        }
+     
     }
 }

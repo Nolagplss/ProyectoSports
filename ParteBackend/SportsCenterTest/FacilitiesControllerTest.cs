@@ -34,7 +34,7 @@ namespace SportsCenterTest
                 new Facility { FacilityId = 2, Name = "Pool", Type = "Pool" }
             };
 
-            _mockFacilityService.Setup(s => s.GetAllAsync())
+            _mockFacilityService.Setup(s => s.GetAllAsync())    
                                .ReturnsAsync(facilities);
 
             //Act

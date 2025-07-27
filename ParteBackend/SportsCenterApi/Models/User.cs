@@ -37,7 +37,7 @@ public partial class User
     public string? Phone { get; set; }
 
     [Column("role_id")]
-    public int RoleId { get; set; }
+    public int RoleId { get; set; } 
 
     [InverseProperty("User")]
     public virtual Member? Member { get; set; }
