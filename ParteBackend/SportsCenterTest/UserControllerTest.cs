@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Moq;
 using SportsCenterApi.Controllers;
 using SportsCenterApi.Models;
@@ -18,12 +19,15 @@ namespace SportsCenterTest
     {
 
         private readonly Mock<IUserService> _mockUserService;
+        private readonly Mock<ILogger<UsersController>> _mockLogger;
+
         private readonly UsersController _userController;
 
         public UserControllerTest()
         {
             _mockUserService = new Mock<IUserService>();
-            _userController = new UsersController(_mockUserService.Object);
+            _mockLogger = new Mock<ILogger<UsersController>>();
+            _userController = new UsersController(_mockUserService.Object, _mockLogger.Object);
         }
 
 

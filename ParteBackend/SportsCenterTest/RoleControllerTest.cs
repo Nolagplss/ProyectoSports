@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Moq;
 using SportsCenterApi.Controllers;
@@ -18,11 +19,13 @@ namespace SportsCenterTest
 
         private readonly Mock<IRoleService> _mockRoleService;
         private readonly RoleController _roleController;
+        private readonly Mock<ILogger<RoleController>> _mockLogger;
 
         public RoleControllerTest()
         {
             _mockRoleService = new Mock<IRoleService>();
-            _roleController = new RoleController(_mockRoleService.Object);
+            _mockLogger = new Mock<ILogger<RoleController>>();
+            _roleController = new RoleController(_mockRoleService.Object, _mockLogger.Object);
         }
 
 

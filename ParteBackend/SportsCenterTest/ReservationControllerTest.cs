@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Moq;
 using SportsCenterApi.Controllers;
 using SportsCenterApi.Models;
@@ -16,12 +17,15 @@ namespace SportsCenterTest
     {
 
         private readonly Mock<IReservationService> _mockReservationService;
+        private readonly Mock<ILogger<ReservationController>> _mockLogger;
+
         private readonly ReservationController _reservationController;
 
         public ReservationControllerTest()  
         {
             _mockReservationService = new Mock<IReservationService>();
-            _reservationController = new ReservationController(_mockReservationService.Object);
+            _mockLogger = new Mock<ILogger<ReservationController>>();
+            _reservationController = new ReservationController(_mockReservationService.Object, _mockLogger.Object);
         }
 
         [Fact]

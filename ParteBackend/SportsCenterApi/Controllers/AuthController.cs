@@ -11,11 +11,12 @@ namespace SportsCenterApi.Controllers
 
         private readonly IUserService _userService;
         private readonly ItokenService _tokenService;
-
-        public AuthController(IUserService userService, ItokenService tokenService)
+        private readonly ILogger<AuthController> _logger;
+        public AuthController(IUserService userService, ItokenService tokenService, ILogger<AuthController> logger)
         {
             _userService = userService;
             _tokenService = tokenService;
+            _logger = logger;
         }
 
         /*
@@ -27,11 +28,19 @@ namespace SportsCenterApi.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
+            _logger.LogInformation("Login attempt for email: {Email}", dto.Email);
+
             var user = await _userService.AuthenticateAsync(dto.Email, dto.Password);
             if (user == null)
+            {
+                _logger.LogWarning("Invalid login attempt for email: {Email}", dto.Email);
                 return Unauthorized("Invalid credentials");
+            }
 
             var token = _tokenService.CreateToken(user);
+
+            _logger.LogInformation("User {Email} logged in successfully", dto.Email);
+
             return Ok(new { token });
         }
     }

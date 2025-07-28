@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit.Abstractions;
+using Microsoft.Extensions.Logging;
 
 namespace SportsCenterTest
 {
@@ -17,6 +18,7 @@ namespace SportsCenterTest
     {
         private readonly Mock<IUserService> _mockUserService;
         private readonly Mock<ItokenService> _mockTokenService;
+        private readonly Mock<ILogger<AuthController>> _mockLogger;
         private readonly AuthController _controller;
         private readonly ITestOutputHelper _output;  
 
@@ -26,7 +28,8 @@ namespace SportsCenterTest
             _output = output;
             _mockUserService = new Mock<IUserService>();
             _mockTokenService = new Mock<ItokenService>();
-            _controller = new AuthController(_mockUserService.Object, _mockTokenService.Object);
+            _mockLogger = new Mock<ILogger<AuthController>>();
+            _controller = new AuthController(_mockUserService.Object, _mockTokenService.Object, _mockLogger.Object);
         }
 
         [Fact]

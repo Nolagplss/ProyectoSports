@@ -9,18 +9,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace SportsCenterTest
 {
     public class FacilitiesControllerTest
     {
         private readonly Mock<IFacilityService> _mockFacilityService;
+        private readonly Mock<ILogger<FacilitiesController>> _mockLogger;
         private readonly FacilitiesController _controller;
 
         public FacilitiesControllerTest()
         {
             _mockFacilityService = new Mock<IFacilityService>();
-            _controller = new FacilitiesController(_mockFacilityService.Object);
+            _mockLogger = new Mock<ILogger<FacilitiesController>>();
+            _controller = new FacilitiesController(_mockFacilityService.Object, _mockLogger.Object);
         }
 
 
