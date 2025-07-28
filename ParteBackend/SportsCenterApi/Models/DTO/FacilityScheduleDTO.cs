@@ -5,6 +5,7 @@ namespace SportsCenterApi.Models.DTO
 {
     public class FacilityScheduleDTO
     {
+        [Required]
         public int ScheduleId { get; set; }
 
         [Required]

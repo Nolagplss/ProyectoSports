@@ -21,6 +21,19 @@ namespace SportsCenterApi.Extensions
             };
         }
 
+        public static UserResponseDTO ToUserResponseDTO(this User user)
+        {
+            return new UserResponseDTO()
+            {
+                UserId = user.UserId,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+                Phone = user.Phone,
+                RoleId = user.RoleId
+            };
+        }
+
         public static User ToUserEntity(this UserDTO dto)
         {
             return new User

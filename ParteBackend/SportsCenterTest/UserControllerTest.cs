@@ -63,7 +63,7 @@ namespace SportsCenterTest
 
             //Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnedUsers = Assert.IsAssignableFrom<IEnumerable<User>>(okResult.Value);
+            var returnedUsers = Assert.IsAssignableFrom<IEnumerable<UserResponseDTO>>(okResult.Value);
             Assert.Equal(2, returnedUsers.Count());
         }
 
@@ -88,7 +88,7 @@ namespace SportsCenterTest
 
             //Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnedUser = Assert.IsType<User>(okResult.Value);
+            var returnedUser = Assert.IsType<UserResponseDTO>(okResult.Value);
             Assert.Equal(1, returnedUser.UserId);
         }
 
@@ -137,7 +137,7 @@ namespace SportsCenterTest
 
             //Assert
             var createdResult = Assert.IsType<CreatedAtActionResult>(result.Result);
-            var returnedUser = Assert.IsType<User>(createdResult.Value);
+            var returnedUser = Assert.IsType<UserResponseDTO>(createdResult.Value);
             Assert.Equal(3, returnedUser.UserId);
         }
         [Fact]
@@ -222,7 +222,7 @@ namespace SportsCenterTest
 
             //Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnedUser = Assert.IsType<User>(okResult.Value);
+            var returnedUser = Assert.IsType<UserResponseDTO>(okResult.Value);
             Assert.Equal("Updated", returnedUser.FirstName);
         }
 

@@ -22,24 +22,27 @@ namespace SportsCenterApi.Controllers
         }
         [Authorize(Roles = "Facility Manager,Administrator")]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<UserResponseDTO>>> GetUsers()
         {
             var users = await _userService.GetAllAsync();
-            return Ok(users);
+            var userDtos = users.Select(u => u.ToUserResponseDTO()).ToList();
+            return Ok(userDtos);
         }
         [Authorize(Roles = "Facility Manager,Administrator")]
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        public async Task<ActionResult<UserResponseDTO>> GetUser(int id)
         {
             var user = await _userService.GetByIdAsync(id);
             if (user == null)
                 return NotFound();
 
-            return Ok(user);
+            var userDto = user.ToUserResponseDTO();
+
+            return Ok(userDto);
         }
         [Authorize(Roles = "Administrator")]
         [HttpPost]
-        public async Task<ActionResult<User>> CreateUser(UserCreateDto userDto)
+        public async Task<ActionResult<UserResponseDTO>> CreateUser(UserCreateDto userDto)
         {
             try
             {
@@ -54,7 +57,8 @@ namespace SportsCenterApi.Controllers
                 };
 
                 var createdUser = await _userService.RegisterUserAsync(user);
-                return CreatedAtAction(nameof(GetUser), new { id = createdUser.UserId }, createdUser);
+                var responseDTO = createdUser.ToUserResponseDTO();
+                return CreatedAtAction(nameof(GetUser), new { id = createdUser.UserId }, responseDTO);
             }
             catch (InvalidOperationException ex)
             {
@@ -68,7 +72,7 @@ namespace SportsCenterApi.Controllers
 
         [Authorize(Roles = "Administrator")]
         [HttpPut("{id}")]
-        public async Task<ActionResult<User>> UpdateUser(int id, UserDTO userDTO)
+        public async Task<ActionResult<UserResponseDTO>> UpdateUser(int id, UserDTO userDTO)
         {
             if (id != userDTO.UserId)
                 return BadRequest();
@@ -77,7 +81,9 @@ namespace SportsCenterApi.Controllers
             if (updatedUser == null)
                 return NotFound();
 
-            return Ok(updatedUser);
+            var responseDto = updatedUser.ToUserResponseDTO();
+
+            return Ok(responseDto);
         }
         [Authorize(Roles = "Administrator")]
         [HttpDelete("{id}")]

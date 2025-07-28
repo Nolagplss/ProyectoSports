@@ -1,9 +1,8 @@
-﻿using Microsoft.Extensions.Diagnostics.HealthChecks;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SportsCenterApi.Models.DTO
 {
-    public class UserDTO
+    public class UserResponseDTO
     {
         [Required]
         public int UserId { get; set; }
@@ -16,14 +15,9 @@ namespace SportsCenterApi.Models.DTO
 
         [Required]
         public string Email { get; set; } = null!;
-
-        [Required]
-        public string Password { get; set; } = null!;
-        
         public string? Phone { get; set; }
 
         [Required]
         public int RoleId { get; set; }
-
     }
 }
