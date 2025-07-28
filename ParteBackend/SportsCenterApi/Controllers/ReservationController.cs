@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SportsCenterApi.Extensions;
 using SportsCenterApi.Models;
 using SportsCenterApi.Models.DTO;
 using SportsCenterApi.Services;
@@ -20,9 +21,13 @@ namespace SportsCenterApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Reservation>>> GetAllReservationsAsync()
+        public async Task<ActionResult<IEnumerable<ReservationResponseDTO>>> GetAllReservationsAsync()
         {
-            return Ok(await _reservationService.GetAllAsync());
+
+            var reservations = await _reservationService.GetAllAsync();
+            
+            var reservationDTO = reservations.Select(u => u.ToReservationResponseDTO()).ToList();
+            return Ok(reservationDTO);
 
         }
 

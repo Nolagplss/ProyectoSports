@@ -2,6 +2,7 @@
 using Moq;
 using SportsCenterApi.Controllers;
 using SportsCenterApi.Models;
+using SportsCenterApi.Models.DTO;
 using SportsCenterApi.Services;
 using System;
 using System.Collections.Generic;
@@ -62,7 +63,7 @@ namespace SportsCenterTest
 
             //Assert
             var okResult = Assert.IsType<OkObjectResult>(result.Result);
-            var returnedReservations = Assert.IsAssignableFrom<IEnumerable<Reservation>>(okResult.Value);
+            var returnedReservations = Assert.IsAssignableFrom<IEnumerable<ReservationResponseDTO>>(okResult.Value);
             Assert.Equal(2, returnedReservations.Count());
 
 
