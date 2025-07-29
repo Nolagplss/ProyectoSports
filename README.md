@@ -107,26 +107,31 @@ All endpoints are available and testable via Swagger (`/swagger`):
 ## 🧪 How to Run
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Nolagplss/ProyectoSports.git
+  git clone https://github.com/Nolagplss/ProyectoSports.git
+cd ProyectoSports/ParteBackend
 
 2. Set up your PostgreSQL database and update appsettings.json:
 "ConnectionStrings": {
-  "DefaultConnection": "Host=localhost;Port=5432;Database=SportsCenterDb;Username=postgres;Password=yourpassword"
+  "DefaultConnection": "Host=host.docker.internal;Port=5432;Database=sports_center;Username=postgres;Password=postgresql"
 }
 
-3. Run the project:
-dotnet run
+3. Build the docker image: 
+ docker build -t sportscenter-api .
 
-5. Visit Swagger UI in your browser:
-https://localhost:{your-port}/swagger
+4. Run the container: 
+ docker run -d -p 5000:80 sportscenter-api
+
+5. Visit Swagger UI in your browser: 
+ http://localhost:5000/swagger/index.html
+
 
 ## 📌 Current Status
-✅ Basic features complete  
-🛠️ Advanced validation complete  
-🧪 Automated tests implemented using xUnit  
-📄 Fully documented with Swagger UI for interactive testing  
-🐳 Dockerization in progress  
++ ✅ Core features complete  
++ 🔐 Auth + role-based permissions working  
++ 🧪 xUnit tests implemented  
++ 📄 Swagger documentation enabled  
++ 🐳 Dockerization completed and running at `http://localhost:5000/swagger/index.html`  
++ ☁️ AWS deployment pending
 
 
 ## 📃 License
