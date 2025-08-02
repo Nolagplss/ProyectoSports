@@ -195,9 +195,10 @@ namespace SportsCenterApi.Controllers
             {
                 _logger.LogWarning("User with ID {UserId} attempted to change password for user {TargetId} without permission", userId, id);
 
-                return Forbid("You do not have permission to change other users passwords.");
+                return Unauthorized(new { message = "You do not have permission to change other users passwords." });
+
             }
-            
+
             //Change the password
             var success = await _userService.ChangePasswordAsync(id, dto.CurrentPassword, dto.NewPassword);
 
