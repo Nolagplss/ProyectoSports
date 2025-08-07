@@ -68,7 +68,27 @@ namespace SportsCenterApi.Repositories
                 .FirstOrDefaultAsync(u => u.UserId == userId);
         }
 
+        //Update the reservation
+        public async Task<Reservation?> UpdateAsyncReservation(Reservation reservation)
+        {
+            _context.Entry(reservation).State = EntityState.Modified;
+            try
+            {
+                await _context.SaveChangesAsync();
+                return reservation;
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!await ExistsAsync(reservation.ReservationId))
+                    return null;
+                throw;
+            }
+        }
 
+        public async Task<bool> ExistsAsync(int id)
+        {
+            return await _context.Reservations.AnyAsync(r => r.ReservationId == id);
+        }
 
     }
 }

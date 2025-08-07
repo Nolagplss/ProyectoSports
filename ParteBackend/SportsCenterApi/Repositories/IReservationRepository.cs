@@ -1,4 +1,5 @@
 ﻿using SportsCenterApi.Models;
+using SportsCenterApi.Models.DTO;
 using System.Security.Claims;
 
 namespace SportsCenterApi.Repositories
@@ -11,6 +12,8 @@ namespace SportsCenterApi.Repositories
         Task<bool> HasActiveReservationAsync(int userId, int facilityId, DateOnly fromDate);
         Task<Facility?> GetFacilityByIdAsync(int facilityId);
         Task<User?> GetUserByIdAsync(int userId);
+
+        Task<Reservation?> UpdateAsyncReservation(Reservation reservation);
 
     }
 }

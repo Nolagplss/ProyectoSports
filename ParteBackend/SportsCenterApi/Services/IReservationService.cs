@@ -1,4 +1,5 @@
 ﻿using SportsCenterApi.Models;
+using SportsCenterApi.Models.DTO;
 using System.Security.Claims;
 
 namespace SportsCenterApi.Services
@@ -13,5 +14,7 @@ namespace SportsCenterApi.Services
         Task PenalizeMemberIfLateCancellationAsync(Reservation reservation);
 
         Task MarkNoShowAsync(int reservationId);
+
+        Task<Reservation?> UpdateAsyncReservation(int id, ReservationCreateDto dto);
     }
 }

@@ -41,6 +41,59 @@ namespace SportsCenterApi.Controllers
 
         }
 
+
+
+        [Authorize (Roles = "Facility Manager,Administrator")]
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateReservation(int id, ReservationCreateDto dto)
+        {
+
+            try
+            {
+                _logger.LogInformation("Updating reservation with the reservation id");
+
+                var updateReservation = await _reservationService.UpdateAsyncReservation(id, dto);
+
+                if (updateReservation == null)
+                {
+                    _logger.LogWarning("Reservation with ID {ReservationId} not found for update", id);
+                    return NotFound();
+                }
+
+                _logger.LogInformation("Reservation with ID {ReservationId} updated successfully", id);
+
+                return Ok(updateReservation.ToReservationResponseDTO());
+            }
+             catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning(ex, "Conflict updating reservation with ID {ReservationID}", id);
+
+                return Conflict(ex.Message);
+            }
+            catch (ArgumentException ex)
+            {
+                _logger.LogWarning(ex, "Bad request updating reservation with ID {ReservationId}", id);
+
+                return BadRequest(ex.Message);
+            }
+
+        }
+
+        [Authorize]
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ReservationResponseDTO>> GetById(int id)
+        {
+            var reserva = await _reservationService.GetByIdAsync(id);
+            if (reserva == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(reserva);
+        }
+
+
+
         [HttpGet("filter")]
         public async Task<IActionResult> FilterReservations(
             [FromQuery] int? userId, [FromQuery] string? facilityType, [FromQuery] string? facilityName, [FromQuery] DateOnly? startDate, [FromQuery] DateOnly? endDate)

@@ -30,6 +30,18 @@ try
         });
 
 
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowFrontend", policy =>
+        {
+            policy.WithOrigins("http://localhost:3000")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+    });
+
+
+
     builder.Services.AddDbContext<SportsCenterContext>(options =>
         options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -170,6 +182,10 @@ try
 
     });
 
+
+
+
+
     var app = builder.Build();
 
    
@@ -177,6 +193,8 @@ try
     app.UseSwaggerUI();
 
     app.UseHttpsRedirection();
+
+    app.UseCors("AllowFrontend");
 
     app.UseAuthentication();
 

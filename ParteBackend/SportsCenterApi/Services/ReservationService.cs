@@ -1,4 +1,5 @@
 ﻿using SportsCenterApi.Models;
+using SportsCenterApi.Models.DTO;
 using SportsCenterApi.Repositories;
 using System.Security.Claims;
 
@@ -124,6 +125,50 @@ namespace SportsCenterApi.Services
             //Update that reservation
             await _reservationRepository.UpdateAsync(reservation);
 
+
+        }
+
+        public async Task<Reservation?> UpdateAsyncReservation(int id, ReservationCreateDto dto)
+        {
+            //Get the existing reservation
+            var existingReservation = await _reservationRepository.GetByIdAsync(id);
+
+            if(existingReservation == null)
+            {
+                return null;
+            }
+
+            //validate
+            if (dto.UserId <= 0)
+                throw new ArgumentException("UserId is required and must be greater than 0");
+
+            if (dto.FacilityId <= 0)
+                throw new ArgumentException("FacilityId is required and must be greater than 0");
+
+            if (string.IsNullOrWhiteSpace(dto.ReservationDate) ||
+                !DateTime.TryParse(dto.ReservationDate, out var parsedDate))
+                throw new ArgumentException("Invalid or missing ReservationDate");
+
+            if (string.IsNullOrWhiteSpace(dto.StartTime) ||
+                !TimeSpan.TryParse(dto.StartTime, out var parsedStartTime))
+                throw new ArgumentException("Invalid or missing StartTime");
+
+            if (string.IsNullOrWhiteSpace(dto.EndTime) ||
+                !TimeSpan.TryParse(dto.EndTime, out var parsedEndTime))
+                throw new ArgumentException("Invalid or missing EndTime");
+
+            if (parsedEndTime <= parsedStartTime)
+                throw new ArgumentException("EndTime must be after StartTime");
+
+            //Update properties
+            existingReservation.UserId = dto.UserId;
+            existingReservation.FacilityId = dto.FacilityId;
+            existingReservation.ReservationDate = DateOnly.FromDateTime(parsedDate);
+            existingReservation.StartTime = TimeOnly.FromTimeSpan(parsedStartTime); ;
+            existingReservation.EndTime = TimeOnly.FromTimeSpan(parsedEndTime);
+            existingReservation.PaymentCompleted = dto.PaymentCompleted;
+
+            return await _reservationRepository.UpdateAsync(existingReservation);
 
         }
     }

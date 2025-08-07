@@ -4,6 +4,9 @@ namespace SportsCenterApi.Models.DTO
 {
     public class ReservationCreateDto
     {
+
+        public int ReservationId { get; set; }
+
         [Required]
         public int UserId { get; set; }
 
