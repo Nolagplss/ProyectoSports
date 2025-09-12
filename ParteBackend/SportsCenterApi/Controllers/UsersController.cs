@@ -195,7 +195,7 @@ namespace SportsCenterApi.Controllers
             {
                 _logger.LogWarning("User with ID {UserId} attempted to change password for user {TargetId} without permission", userId, id);
 
-                return Unauthorized(new { message = "You do not have permission to change other users passwords." });
+                return Forbid();
 
             }
 
@@ -206,7 +206,7 @@ namespace SportsCenterApi.Controllers
             {
                 _logger.LogWarning("Failed to change password for user {TargetId}", id);
 
-                return Forbid("User not fount");
+                return NotFound(new { message = "User not found" });
             }
             _logger.LogInformation("Password for user {TargetId} changed successfully by user {UserId}", id, userId);
 

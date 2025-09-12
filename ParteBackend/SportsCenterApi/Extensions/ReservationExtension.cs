@@ -35,7 +35,7 @@ namespace SportsCenterApi.Extensions
                 PaymentCompleted = reservation.PaymentCompleted ?? false
 
             };
-        }
+        }   
 
     }
 }
