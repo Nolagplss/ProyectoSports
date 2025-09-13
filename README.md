@@ -2,13 +2,7 @@
 
 This is a backend project in development for managing reservations in a sports facility. The API is built with **ASP.NET Core** following clean architecture principles (Controllers → Services → Repositories), and implements **JWT authentication**, role and permission control, and a fully functional facility reservation system.
 
-> ⚠️ **IMPORTANT:** This project is still under development. Key features yet to be completed include:
-> - Advanced validation
-> - Automated testing
-> - Docker support
-> - Cloud deployment (AWS planned)  
-> Still, the app is **functional**.
-
+> ⚠️ **IMPORTANT:** This project is still under development.
 ---
 
 ## 🚀 Features
@@ -124,6 +118,11 @@ cd ProyectoSports/ParteBackend
 5. Visit Swagger UI in your browser: 
  http://localhost:5000/swagger/index.html
 
+## 🌐 Frontend Status
+
+The frontend is currently under development using **Angular**.  
+At this stage, it includes only the **main dashboard layout** and the **login screen**.  
+Further modules such as user management, reservation views, and facility interaction are planned for upcoming iterations.
 
 ## 📌 Current Status
 + ✅ Core features complete  
@@ -132,7 +131,7 @@ cd ProyectoSports/ParteBackend
 + 📄 Swagger documentation enabled  
 + 🐳 Dockerization completed and running at `http://localhost:5000/swagger/index.html`  
 + ☁️ AWS deployment pending
-
++ 🌐 Angular frontend in progress (currently includes login and main panel only)
 
 ## 📃 License
 This code was developed by **Samuel Radu Dragomir** and is part of my personal portfolio.  
