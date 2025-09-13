@@ -1,0 +1,15 @@
+<header class="header">
+        <div class="nav-container">
+            <div class="logo">SportBook</div>
+            @if(showNav){
+            <nav>
+                <ul class="nav-links">
+                   <li><a [routerLink]="['/']" fragment="inicio">Inicio</a></li>
+                   <li><a [routerLink]="['/']" fragment="como-funciona">Cómo funciona</a></li>
+                   <li><a [routerLink]="['/']" fragment="contacto">Contacto</a></li>
+                    
+                </ul>
+            </nav>
+            }
+        </div>
+    </header>

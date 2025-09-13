@@ -1,0 +1,173 @@
+<!-- Header -->
+@if(headerService.showHeader()){
+  <app-header [showNav]="headerService.showNavLinks()"></app-header>
+}
+
+@if(!isAuthRoute()){
+     
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1>Book Your Sports Court</h1>
+            <p>Find, schedule, and play easily at the best sports facilities</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" [routerLink]="['/login']">Log In</button>
+                <button class="btn btn-secondary" [routerLink]="['/register']">Create Account</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Why choose SportBook?</h2>
+                <p>We make booking sports spaces simple with modern technology and an easy process</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📅</div>
+                    <h3>Easy Booking</h3>
+                    <p>Intuitive system that lets you reserve your court in seconds</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real Availability</h3>
+                    <p>Updated real-time information on all available courts</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💳</div>
+                    <h3>Secure Payment</h3>
+                    <p>Multiple payment options with maximum security for your transactions</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Best Courts</h3>
+                    <p>Access to the highest quality sports facilities in your area</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile App</h3>
+                    <p>Manage your bookings from anywhere with our mobile app</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🤝</div>
+                    <h3>24/7 Support</h3>
+                    <p>Customer support team available whenever you need help</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>How it Works</h2>
+                <p>Booking your favorite court is easier than you think</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Search for a court</h3>
+                    <p>Explore available options by location, sport, and time</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Select date & time</h3>
+                    <p>Pick the perfect moment that fits your schedule</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Make the payment</h3>
+                    <p>Confirm your booking with a quick and secure payment</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Time to play!</h3>
+                    <p>Get your confirmation and enjoy your sports time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat fade-in">
+                    <h3>500+</h3>
+                    <p>Courts available</p>
+                </div>
+                <div class="stat fade-in">
+                    <h3>10K+</h3>
+                    <p>Active users</p>
+                </div>
+                <div class="stat fade-in">
+                    <h3>50+</h3>
+                    <p>Cities covered</p>
+                </div>
+                <div class="stat fade-in">
+                    <h3>99%</h3>
+                    <p>Customer satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Start Playing Today</h2>
+                <p>Join thousands of athletes already enjoying the easiest way to book courts</p>
+                <button class="btn btn-primary" [routerLink]="['/register']">Create Free Account</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SportBook</h4>
+                    <p>The leading platform for booking sports facilities across Spain.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📧 hellosportbook.com</li>
+                        <li>📱 +1 (555) 123-4567</li>
+                        <li>📍 Madrid, Spain</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SportBook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+} 
+@else {
+    <router-outlet></router-outlet>
+}
