@@ -35,7 +35,25 @@ namespace SportsCenterApi.Extensions
                 PaymentCompleted = reservation.PaymentCompleted ?? false
 
             };
-        }   
+        }
+
+        public static ReservationWithFacilityDTO ToReservationWithFacilityDTO(this Reservation r)
+        {
+            return new ReservationWithFacilityDTO
+            {
+                ReservationId = r.ReservationId,
+                UserId = r.UserId,
+                FacilityId = r.FacilityId,
+                FacilityName = r.Facility?.Name ?? string.Empty,
+                FacilityType = r.Facility?.Type ?? string.Empty,
+                ReservationDate = r.ReservationDate.ToString("yyyy-MM-dd"),
+                StartTime = r.StartTime.ToString("HH:mm"),
+                EndTime = r.EndTime.ToString("HH:mm"),
+                PaymentCompleted = r.PaymentCompleted ?? false,
+                NoShow = r.NoShow ?? false
+            };
+        }
+
 
     }
 }

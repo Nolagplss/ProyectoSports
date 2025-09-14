@@ -40,7 +40,16 @@ namespace SportsCenterApi.Controllers
             return Ok(reservationDTO);
 
         }
+       
+        [HttpGet("with-facilities")]
+        public async Task<ActionResult<IEnumerable<ReservationWithFacilityDTO>>> GetAllWithFacilities()
+        {
+            _logger.LogInformation("Fetching all reservations with facility info");
 
+            var reservations = await _reservationService.GetAllReservationsWithFacilitiesDTOAsync();
+
+            return Ok(reservations);
+        }
 
 
         [Authorize (Roles = "Facility Manager,Administrator")]

@@ -1,1 +1,164 @@
-<p>dashboard works!</p>
+<!-- dashboard.component.html -->
+<div class="panelReservas cardBlanca">
+  <div class="division-panelReservas">
+    
+    <div>
+      <h2>Reservations Panel</h2>
+    </div>
+ 
+    <div>
+      <button class="btn btn-primary">+ New Reservation</button>
+      <button class="btn btn-outline" (click)="logout()">Log Out</button>
+    </div>
+  </div>
+</div>
+
+<div class="cardBlanca">
+  <div class="gird-filtroReservas">
+    <!--RESERVATIONS FILTER TITLE-->
+    <div class="grid-filtroReservas-item-1">
+      <h3>Filter Reservations</h3>
+    </div>
+    <!--Filter button-->
+    <div class="grid-filtroReservas-item-2">
+      <button class="btn btn-secondary" (click)="toogleFilters()">
+        {{ showFilters ? 'Hide filters' : 'Show filters' }}
+      </button>
+    </div>
+    <!--Filter form-->
+    @if(showFilters){
+    <div class="cardGris">
+      <form [formGroup]="filterForm" class="grid-form">
+        <!-- Facility type -->
+        <div class="form-item">
+          <label for="tipo">Facility Type</label>
+          <select id="tipo" formControlName="facilityType">
+            <option value="">Select...</option>
+            <option value="All">All types</option>
+            <option value="Soccer">Soccer</option>
+            <option value="Tennis">Tennis</option>
+            <option value="Padel">Padel</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Pool">Pool</option>
+            <option value="Gym">Gym</option>
+          </select>
+        </div>
+        <!-- Facility name -->
+        <div class="form-item">
+          <label for="nombre">Facility Name</label>
+          <input 
+            type="text" 
+            id="nombre" 
+            formControlName="facilityName"
+            placeholder="Search by name..." 
+          />
+        </div>
+        <!-- Start Date -->
+        <div class="form-item">
+          <label for="fechaInicio">Start Date</label>
+          <input type="date" id="fechaInicio" formControlName="startDate" />
+        </div>
+        <!-- End Date -->
+        <div class="form-item">
+          <label for="fechaFin">End Date</label>
+          <input type="date" id="fechaFin" formControlName="endDate" />
+        </div>
+      </form>
+    </div>
+    <!-- Filter and clear buttons -->
+    <div class="form-buttons">
+      <button class="btn btn-primary" (click)="filterReservations()">Filter</button>
+      <button class="btn btn-secondary" (click)="clearFilters()">Clear</button>
+    </div>
+    }
+  </div>
+</div>
+
+<!-- MY RESERVATIONS -->
+<div class="cardBlanca">
+  <div class="grid-misReservas">
+    <!--TITLE-->
+    <div class="grid-misReservas-item-1">
+      <h3>My Reservations</h3>
+    </div>
+    <div class="grid-misReservas-item-2">
+      <button class="cantidadReservas">{{ cantidadReservas }} reservation(s)</button>
+    </div>
+  </div>
+
+  <!-- Loading indicator -->
+  @if (loading) {
+    <div class="loading-container">
+      <p>Loading reservations...</p>
+    </div>
+  }
+
+  <!-- Error message -->
+  @if (error) {
+    <div class="error-message">
+      <p>{{ error }}</p>
+      <button class="btn btn-primary" (click)="loadReservations()">Retry</button>
+    </div>
+  }
+
+  <!-- Reservations list -->
+  @if (!loading && !error) {
+    @if (reservations.length === 0) {
+      <div class="no-reservations">
+        <p>You don’t have any reservations at the moment.</p>
+      </div>
+    } @else {
+      <div class="reservations-grid">
+        @for (reservation of reservations; track reservation.reservationId) {
+          <div class="reservation-card">
+            <div class="card-header">
+              <h4>{{ reservation.facilityName }}</h4>
+              <span class="status-badge" [class]="getStatusClass(reservation)">
+                {{ getStatusText(reservation) }}
+              </span>
+            </div>
+            <div class="card-content">
+              <div class="reservation-details">
+                <div class="detail-item">
+                  <span class="label">Date</span>
+                  <span class="value">{{ formatDate(reservation.reservationDate) }}</span>
+                </div>
+                <div class="detail-item">
+                  <span class="label">Time</span>
+                  <span class="value">{{ formatTimeRange(reservation.startTime, reservation.endTime) }}</span>
+                </div>
+                <div class="detail-item">
+                  <span class="label">Type</span>
+                  <span class="value">{{ reservation.facilityType }}</span>
+                </div>
+                <div class="detail-item">
+                  <span class="label">Payment Status</span>
+                  <span class="value" [class]="getPaymentStatusClass(reservation)">
+                    {{ getPaymentStatusText(reservation) }}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button 
+                class="btn btn-danger" 
+                (click)="cancelReservation(reservation.reservationId)"
+                [disabled]="reservation.noShow"
+              >
+                Cancel
+              </button>
+              @if (reservation.paymentCompleted && !reservation.noShow) {
+                <button 
+                  class="btn btn-warning" 
+                  (click)="markAsNoShow(reservation.reservationId)"
+                >
+                  No Show
+                </button>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  }
+</div>

@@ -90,5 +90,13 @@ namespace SportsCenterApi.Repositories
             return await _context.Reservations.AnyAsync(r => r.ReservationId == id);
         }
 
+        public async Task<IEnumerable<Reservation>> GetAllWithFacilitiesAsync()
+        {
+            return await _context.Reservations
+                .Include(r => r.Facility)
+                .ToListAsync();
+        }
+
+
     }
 }

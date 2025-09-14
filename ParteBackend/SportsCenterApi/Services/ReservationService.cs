@@ -1,4 +1,5 @@
-﻿using SportsCenterApi.Models;
+﻿using SportsCenterApi.Extensions;
+using SportsCenterApi.Models;
 using SportsCenterApi.Models.DTO;
 using SportsCenterApi.Repositories;
 using System.Security.Claims;
@@ -171,5 +172,19 @@ namespace SportsCenterApi.Services
             return await _reservationRepository.UpdateAsync(existingReservation);
 
         }
+        //Get all with the facilities
+        public async Task<IEnumerable<Reservation>> GetAllReservationsWithFacilitiesAsync()
+        {
+            
+            return await _reservationRepository.GetAllWithFacilitiesAsync();
+        }
+        //Get all with the facilities returning the dto.
+        public async Task<IEnumerable<ReservationWithFacilityDTO>> GetAllReservationsWithFacilitiesDTOAsync()
+        {
+            var reservations = await _reservationRepository.GetAllWithFacilitiesAsync();
+            return reservations.Select(r => r.ToReservationWithFacilityDTO());
+        }
+
+
     }
 }

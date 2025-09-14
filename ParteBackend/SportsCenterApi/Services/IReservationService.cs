@@ -16,5 +16,10 @@ namespace SportsCenterApi.Services
         Task MarkNoShowAsync(int reservationId);
 
         Task<Reservation?> UpdateAsyncReservation(int id, ReservationCreateDto dto);
+
+        Task<IEnumerable<Reservation>> GetAllReservationsWithFacilitiesAsync();
+
+        Task<IEnumerable<ReservationWithFacilityDTO>> GetAllReservationsWithFacilitiesDTOAsync();
+
     }
 }

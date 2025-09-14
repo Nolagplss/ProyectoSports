@@ -15,5 +15,7 @@ namespace SportsCenterApi.Repositories
 
         Task<Reservation?> UpdateAsyncReservation(Reservation reservation);
 
+        Task<IEnumerable<Reservation>> GetAllWithFacilitiesAsync();
+
     }
 }
