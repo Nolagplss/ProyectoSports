@@ -1,4 +1,5 @@
-﻿using SportsCenterApi.Extensions;
+﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+using SportsCenterApi.Extensions;
 using SportsCenterApi.Models;
 using SportsCenterApi.Models.DTO;
 using SportsCenterApi.Repositories;
@@ -10,9 +11,12 @@ namespace SportsCenterApi.Services
     {
         private readonly IReservationRepository _reservationRepository;
 
-        public ReservationService(IReservationRepository reservationRepository) : base(reservationRepository)
+        private readonly IFacilitiesRepository _facilitiesRepository;
+
+        public ReservationService(IReservationRepository reservationRepository, IFacilitiesRepository facilitiesRepository) : base(reservationRepository)
         {
             _reservationRepository = reservationRepository;
+            _facilitiesRepository = facilitiesRepository;
         }
 
         public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, string? facilityType, string? facilityName, DateOnly? startDate, DateOnly? endDate)
@@ -185,6 +189,48 @@ namespace SportsCenterApi.Services
             return reservations.Select(r => r.ToReservationWithFacilityDTO());
         }
 
+        public async Task<List<AvailableSlotsDTO>> GetAvailableSlotsAsync(int facilityId, DateOnly date)
+        {
+            // Get facility
+            var facility = await _facilitiesRepository.GetByIdAsync(facilityId);
+            if (facility == null) throw new KeyNotFoundException("Facility not found");
+
+            //Name of the day
+            var dayName = date.DayOfWeek.ToString();
+
+            //Search the schedule
+            var schedule = facility.FacilitySchedules
+                .FirstOrDefault(s => s.Day_of_Week.Equals(dayName, StringComparison.OrdinalIgnoreCase));
+
+            if (schedule == null) return new List<AvailableSlotsDTO>();
+
+            //Get existing reservations
+            var reservations = await _reservationRepository.GetReservationsByFacilityAndDateAsync(facilityId, date);
+
+            var availableSlots = new List<AvailableSlotsDTO>();
+
+            int startHour = schedule.OpeningTime.Hour;
+            int endHour = schedule.ClosingTime.Hour;
+
+            for (int h = startHour; h < endHour; h++)
+            {
+                bool isTaken = reservations.Any(r => r.StartTime.Hour == h);
+
+                if (!isTaken)
+                {
+                    var slotStart = new TimeOnly(h, 0);
+                    var slotEnd = slotStart.AddHours(1);
+
+                    availableSlots.Add(new AvailableSlotsDTO
+                    {
+                        StartTime = slotStart.ToString("HH:mm"),
+                        EndTime = slotEnd.ToString("HH:mm")
+                    });
+                }
+            }
+
+            return availableSlots;
+        }
 
     }
 }

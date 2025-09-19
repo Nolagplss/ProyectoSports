@@ -98,5 +98,13 @@ namespace SportsCenterApi.Repositories
         }
 
 
+        public async Task<List<Reservation>> GetReservationsByFacilityAndDateAsync(int facilityId, DateOnly date)
+        {
+            return await _context.Reservations
+                .Where(r => r.FacilityId == facilityId && r.ReservationDate == date)
+                .ToListAsync();
+        }
+
+
     }
 }

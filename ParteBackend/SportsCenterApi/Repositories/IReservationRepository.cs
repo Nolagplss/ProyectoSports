@@ -17,5 +17,8 @@ namespace SportsCenterApi.Repositories
 
         Task<IEnumerable<Reservation>> GetAllWithFacilitiesAsync();
 
+        Task<List<Reservation>> GetReservationsByFacilityAndDateAsync(int facilityId, DateOnly date);
+
+
     }
 }

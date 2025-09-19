@@ -1,0 +1,284 @@
+<!-- new-reservation.component.html -->
+<div class="panelReservas cardBlanca">
+  <div class="division-panelReservas">
+    <!-- Left column: title -->
+    <div>
+      <h2>New Reservation</h2>
+      <p class="subtitle">Book your sports facility in 4 simple steps</p>
+    </div>
+    <!-- Right column: back button -->
+    <div>
+      <button class="btn btn-outline" (click)="goBack()">← Back to Dashboard</button>
+    </div>
+  </div>
+</div>
+
+<!-- Progress Steps -->
+<div class="cardBlanca">
+  <div class="progress-container">
+    <div class="progress-step" [class.active]="currentStep >= 1" [class.completed]="currentStep > 1">
+      <div class="step-circle">1</div>
+      <span>Sport</span>
+    </div>
+    <div class="progress-line" [class.completed]="currentStep > 1"></div>
+
+    <div class="progress-step" [class.active]="currentStep >= 2" [class.completed]="currentStep > 2">
+      <div class="step-circle">2</div>
+      <span>Facility</span>
+    </div>
+    <div class="progress-line" [class.completed]="currentStep > 2"></div>
+
+    <div class="progress-step" [class.active]="currentStep >= 3" [class.completed]="currentStep > 3">
+      <div class="step-circle">3</div>
+      <span>Date & Time</span>
+    </div>
+    <div class="progress-line" [class.completed]="currentStep > 3"></div>
+
+    <div class="progress-step" [class.active]="currentStep >= 4" [class.completed]="currentStep > 4">
+      <div class="step-circle">4</div>
+      <span>Confirm</span>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Select Sport Type -->
+@if (currentStep === 1) {
+  <div class="cardBlanca step-card">
+    <div class="step-header">
+      <h3>Step 1: Choose your sport</h3>
+      <p>Select the type of sports facility you want to book</p>
+    </div>
+
+    <div class="sports-grid">
+      @for (sport of availableSports; track sport.type) {
+        <div class="sport-card" 
+             [class.selected]="selectedSport?.type === sport.type"
+             (click)="selectSport(sport)">
+          <div class="sport-icon">{{ sport.icon }}</div>
+          <h4>{{ sport.name }}</h4>
+          <p>{{ sport.description }}</p>
+          <div class="sport-info">
+            <span class="info-badge">{{ sport.maxDuration }}h max</span>
+            <span class="info-badge">{{ sport.availableFacilities }} courts</span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="step-actions">
+      <button class="btn btn-primary" 
+              [disabled]="!selectedSport"
+              (click)="nextStep()">
+        Continue
+      </button>
+    </div>
+  </div>
+}
+
+<!-- STEP 2: Select Specific Facility -->
+@if (currentStep === 2) {
+  <div class="cardBlanca step-card">
+    <div class="step-header">
+      <h3>Step 2: Select the facility</h3>
+      <p>Choose the specific court for {{ selectedSport?.name }}</p>
+    </div>
+
+    <div class="facilities-grid">
+      @for (facility of availableFacilities; track facility.facilityId) {
+        <div class="facility-card"
+             [class.selected]="selectedFacility?.facilityId === facility.facilityId"
+             (click)="selectFacility(facility)">
+          <div class="facility-header">
+            <h4>{{ facility.name }}</h4>
+            <span class="status-badge" [class.status-available]="true">
+              Available
+            </span>
+          </div>
+          <div class="facility-details">
+            <div class="detail-row">
+              <span class="label">Max duration:</span>
+              <span class="value">{{ facility.maxReservationHours }} hours</span>
+            </div>
+            <div class="detail-row">
+              <span class="label">Min duration:</span>
+              <span class="value">{{ facility.minReservationHours }} hours</span>
+            </div>
+            <div class="detail-row">
+              <span class="label">Cancellation:</span>
+              <span class="value">{{ facility.cancellationHours }} hours before</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="step-actions">
+      <button class="btn btn-secondary" (click)="previousStep()">← Previous</button>
+      <button class="btn btn-primary" 
+              [disabled]="!selectedFacility"
+              (click)="nextStep()">
+        Continue
+      </button>
+    </div>
+  </div>
+}
+
+<!-- STEP 3: Select Date and Time -->
+@if (currentStep === 3) {
+  <div class="cardBlanca step-card">
+    <div class="step-header">
+      <h3>Step 3: Choose date and time</h3>
+      <p>Select when you want to use {{ selectedFacility?.name }}</p>
+    </div>
+
+    <div class="datetime-container">
+      <div class="date-section">
+        <h4>Select date</h4>
+        <div class="date-grid">
+          @for (date of availableDates; track date.dateString) {
+            <div class="date-card"
+                 [class.selected]="selectedDate?.dateString === date.dateString"
+                 [class.today]="date.isToday"
+                 (click)="selectDate(date)">
+              <div class="date-day">{{ date.dayName }}</div>
+              <div class="date-number">{{ date.dayNumber }}</div>
+              <div class="date-month">{{ date.monthName }}</div>
+            </div>
+          }
+        </div>
+      </div>
+
+      @if (selectedDate) {
+        <div class="time-section">
+          <h4>Available times for {{ selectedDate.displayDate }}</h4>
+          <div class="time-grid">
+            @for (timeSlot of availableTimeSlots; track timeSlot.startTime) {
+              <div class="time-card"
+                   [class.selected]="selectedTimeSlot?.startTime === timeSlot.startTime"
+                   (click)="selectTimeSlot(timeSlot)">
+                <div class="time-range">
+                  {{ timeSlot.startTime }} - {{ timeSlot.endTime }}
+                </div>
+                <div class="time-duration">{{ timeSlot.duration }}h</div>
+              </div>
+            }
+          </div>
+
+          @if (selectedTimeSlot) {
+            <div class="duration-selector">
+              <h5>Reservation duration</h5>
+              <div class="duration-options">
+                @for (duration of availableDurations; track duration) {
+                  <button class="duration-btn"
+                          [class.selected]="selectedDuration === duration"
+                          [disabled]="!canSelectDuration(duration)"
+                          (click)="selectDuration(duration)">
+                    {{ duration }}h
+                  </button>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="step-actions">
+      <button class="btn btn-secondary" (click)="previousStep()">← Previous</button>
+      <button class="btn btn-primary" 
+              [disabled]="!selectedDate || !selectedTimeSlot || !selectedDuration"
+              (click)="nextStep()">
+        Continue
+      </button>
+    </div>
+  </div>
+}
+
+<!-- STEP 4: Confirmation -->
+@if (currentStep === 4) {
+  <div class="cardBlanca step-card">
+    <div class="step-header">
+      <h3>Step 4: Confirm your reservation</h3>
+      <p>Review the details before confirming</p>
+    </div>
+
+    <div class="confirmation-container">
+      <div class="reservation-summary">
+        <div class="summary-card">
+          <div class="summary-header">
+            <h4>Reservation summary</h4>
+          </div>
+
+          <div class="summary-details">
+            <div class="summary-row">
+              <span class="label">Sport:</span>
+              <span class="value">{{ selectedSport?.name }}</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">Facility:</span>
+              <span class="value">{{ selectedFacility?.name }}</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">Date:</span>
+              <span class="value">{{ selectedDate?.displayDate }}</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">Time:</span>
+              <span class="value">{{ selectedTimeSlot?.startTime }} - {{ getEndTime() }}</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">Duration:</span>
+              <span class="value">{{ selectedDuration }} hour(s)</span>
+            </div>
+            <div class="summary-row total">
+              <span class="label">Total amount:</span>
+              <span class="value price">{{ calculatePrice() }}€</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <div class="terms-card">
+            <h5>Reservation terms</h5>
+            <ul class="terms-list">
+              <li>• You can cancel up to 1 hour before the start</li>
+              <li>• If not canceled in time, the fee will be charged</li>
+              <li>• You can only have one active reservation per facility</li>
+              <li>• Reservation is confirmed once payment is completed</li>
+            </ul>
+
+            <label class="terms-checkbox">
+              <input type="checkbox" [(ngModel)]="termsAccepted">
+              <span class="checkmark"></span>
+              I accept the reservation terms
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn btn-secondary" (click)="previousStep()">← Previous</button>
+      <button class="btn btn-primary" 
+              [disabled]="!termsAccepted || isSubmitting"
+              (click)="confirmReservation()">
+        @if (isSubmitting) {
+          <span class="loading-spinner"></span>
+          Processing...
+        } @else {
+          Confirm Reservation
+        }
+      </button>
+    </div>
+  </div>
+}
+
+<!-- Loading overlay -->
+@if (loading) {
+  <div class="loading-overlay">
+    <div class="loading-content">
+      <div class="loading-spinner-large"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+}

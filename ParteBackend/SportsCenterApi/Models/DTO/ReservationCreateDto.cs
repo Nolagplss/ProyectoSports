@@ -27,5 +27,7 @@ namespace SportsCenterApi.Models.DTO
 
         [Required]
         public bool PaymentCompleted { get; set; }
+
+        public bool? NoShow { get; set; }
     }
 }

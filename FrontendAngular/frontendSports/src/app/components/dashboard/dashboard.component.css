@@ -1,122 +1,4 @@
-/* dashboard.component.css */
-/* Card style */
-.cardBlanca {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 5rem;
-  font-size: 1.5rem;
-}
-
-/* Grid style */
-.division-panelReservas {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.division-panelReservas > div:last-child {
-  display: flex;
-  gap: 10px;
-}
-
-/* Buttons */
-.btn {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 10px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  letter-spacing: -0.01em;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: left 0.5s;
-}
-
-.btn:hover::before {
-  left: 100%;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
-  color: white;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-}
-
-.btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
-}
-
-.btn-outline {
-  background: none;
-  border: 2px solid #4f46e5;
-  color: #4f46e5;
-  transition: all 0.2s ease;
-}
-
-.btn-outline:hover {
-  background: #4f46e5;
-  color: white;
-}
-
-.btn-secondary {
-  background: rgba(248, 250, 252, 0.8);
-  color: #64748b;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  backdrop-filter: blur(10px);
-}
-
-.btn-secondary:hover {
-  background: rgba(241, 245, 249, 0.9);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.btn-danger {
-  background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 0.8rem;
-}
-
-.btn-danger:hover {
-  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
-}
-
-.btn-danger:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.btn-warning {
-  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 0.8rem;
-}
-
-.btn-warning:hover {
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
-}
+/* dashboard.component.css - Solo estilos específicos del dashboard */
 
 /* Reservation filter section */
 .gird-filtroReservas {
@@ -142,12 +24,7 @@
 .cardGris {
   grid-column: 1 / -1;
   grid-row: 2;
-  background-color: rgb(246, 249, 250);
-  border-radius: 10px;
-  border: 1px solid rgb(236, 236, 236);
-  padding: 20px;
   margin-top: 1rem;
-  font-size: 1rem;
 }
 
 /* Filter form */
@@ -155,24 +32,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-}
-
-.form-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-label {
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-input, select {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -258,35 +117,6 @@ input, select {
   letter-spacing: -0.01em;
 }
 
-/* Modern reservation statuses */
-.status-badge {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  position: relative;
-}
-
-.status-confirmed {
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.15) 100%);
-  color: #15803d;
-  border: 1px solid rgba(34, 197, 94, 0.3);
-}
-
-.status-pending {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%);
-  color: #d97706;
-  border: 1px solid rgba(245, 158, 11, 0.3);
-}
-
-.status-no-show {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.15) 100%);
-  color: #dc2626;
-  border: 1px solid rgba(239, 68, 68, 0.3);
-}
-
 /* Reservation details */
 .reservation-details {
   margin: 1.5rem 0;
@@ -316,14 +146,6 @@ input, select {
   font-size: 0.875rem;
 }
 
-.text-success {
-  color: #15803d !important;
-}
-
-.text-warning {
-  color: #d97706 !important;
-}
-
 /* Card actions */
 .card-actions {
   display: flex;
@@ -334,55 +156,16 @@ input, select {
   border-top: 1px solid rgba(241, 245, 249, 0.8);
 }
 
-/* Additional states */
-.loading-container {
-  text-align: center;
-  padding: 2rem;
-  color: #64748b;
-}
-
-.error-message {
-  text-align: center;
-  padding: 2rem;
-  color: #dc2626;
-  background-color: #fef2f2;
-  border-radius: 8px;
-  border: 1px solid #fecaca;
-}
-
-.no-reservations {
-  text-align: center;
-  padding: 3rem;
-  color: #64748b;
-}
-
-/* Improved responsive */
+/* Responsive específico del dashboard */
 @media (max-width: 768px) {
-  .cardBlanca {
-    margin: 1rem;
-    padding: 15px;
-    font-size: 1.2rem;
-  }
-  
-  .division-panelReservas {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  
-  .division-panelReservas > div:last-child {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  
   .reservations-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .gird-filtroReservas {
     grid-template-columns: 1fr;
   }
-  
+
   .grid-filtroReservas-item-2 {
     justify-self: start;
     margin-right: 0;

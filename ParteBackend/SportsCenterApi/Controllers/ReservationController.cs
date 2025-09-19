@@ -184,7 +184,7 @@ namespace SportsCenterApi.Controllers
                 StartTime = TimeOnly.Parse(dto.StartTime),
                 EndTime = TimeOnly.Parse(dto.EndTime),
                 PaymentCompleted = dto.PaymentCompleted,
-                NoShow = false
+                NoShow = dto.NoShow
             };
 
             try
@@ -316,6 +316,21 @@ namespace SportsCenterApi.Controllers
             }
 
 
+        }
+        [Authorize]
+        [HttpGet("available-slots")]
+        public async Task<IActionResult> GetAvailableSlots([FromQuery] int facilityId, [FromQuery] string date)
+        {
+            _logger.LogInformation("Getting available slots for facility {FacilityId} on {Date}", facilityId, date);
+
+            if (!DateOnly.TryParse(date, out var parsedDate))
+            {
+                return BadRequest("Invalid date format. Use yyyy-MM-dd.");
+            }
+
+            var slots = await _reservationService.GetAvailableSlotsAsync(facilityId, parsedDate);
+
+            return Ok(slots);
         }
 
     }

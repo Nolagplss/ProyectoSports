@@ -21,5 +21,6 @@ namespace SportsCenterApi.Services
 
         Task<IEnumerable<ReservationWithFacilityDTO>> GetAllReservationsWithFacilitiesDTOAsync();
 
+        Task<List<AvailableSlotsDTO>> GetAvailableSlotsAsync(int facilityId, DateOnly date);
     }
 }
