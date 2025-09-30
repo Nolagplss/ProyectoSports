@@ -178,7 +178,7 @@ namespace SportsCenterApi.Controllers
 
             var reservation = new Reservation
             {
-                UserId = dto.UserId,
+                UserId = currentUserId,
                 FacilityId = dto.FacilityId,
                 ReservationDate = DateOnly.Parse(dto.ReservationDate),
                 StartTime = TimeOnly.Parse(dto.StartTime),

@@ -38,7 +38,7 @@ namespace SportsCenterApi.Extensions
         }
 
         public static ReservationWithFacilityDTO ToReservationWithFacilityDTO(this Reservation r)
-        {
+        {   
             return new ReservationWithFacilityDTO
             {
                 ReservationId = r.ReservationId,

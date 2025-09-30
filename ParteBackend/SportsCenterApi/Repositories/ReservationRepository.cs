@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using SportsCenterApi.Extensions;
 using SportsCenterApi.Models;
+using SportsCenterApi.Models.DTO;
 
 namespace SportsCenterApi.Repositories
 {
@@ -12,9 +14,11 @@ namespace SportsCenterApi.Repositories
            
         }
 
-        public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, string? facilityType, string? facilityName, DateOnly? startDate, DateOnly? endDate)
+        public async Task<IEnumerable<ReservationWithFacilityDTO>> FilterReservationsAsync(int? userId, string? facilityType, string? facilityName, DateOnly? startDate, DateOnly? endDate)
         {
-            var query = _context.Reservations.AsQueryable();
+            var query = _context.Reservations
+                .Include(r => r.Facility)
+                .AsQueryable();
 
             //Filter by id
             if (userId.HasValue)
@@ -31,19 +35,20 @@ namespace SportsCenterApi.Repositories
             //Filter by type
             if(!string.IsNullOrEmpty(facilityType))
             {
-                query = query.Include(r => r.Facility)
-                    .Where(r => r.Facility.Type == facilityType);
+                query = query.Where(r => r.Facility.Type == facilityType);
+
             }
 
             //Filter by Name
             if (!string.IsNullOrEmpty(facilityName))
             {
-                query = query.Include(r => r.Facility)
-                    .Where(r => r.Facility.Name == facilityName);
-            }
-            
+                query = query.Where(r => r.Facility.Name == facilityName);
 
-            return await query.ToListAsync();
+            }
+            var reservations = await query.ToListAsync();
+
+            return reservations.Select(r => r.ToReservationWithFacilityDTO()).ToList();
+
 
         }
 
@@ -57,7 +62,9 @@ namespace SportsCenterApi.Repositories
 
         public async Task<Facility?> GetFacilityByIdAsync(int facilityId)
         {
-            return await _context.Facilities.FindAsync(facilityId);
+            return await _context.Facilities
+                     .Include(f => f.FacilitySchedules)
+                     .FirstOrDefaultAsync(f => f.FacilityId == facilityId);
         }
 
         public async Task<User?> GetUserByIdAsync(int userId)

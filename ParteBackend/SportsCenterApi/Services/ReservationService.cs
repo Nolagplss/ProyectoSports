@@ -19,7 +19,7 @@ namespace SportsCenterApi.Services
             _facilitiesRepository = facilitiesRepository;
         }
 
-        public async Task<IEnumerable<Reservation>> FilterReservationsAsync(int? userId, string? facilityType, string? facilityName, DateOnly? startDate, DateOnly? endDate)
+        public async Task<IEnumerable<ReservationWithFacilityDTO>> FilterReservationsAsync(int? userId, string? facilityType, string? facilityName, DateOnly? startDate, DateOnly? endDate)
         {
             return await _reservationRepository.FilterReservationsAsync(userId,facilityType, facilityName, startDate, endDate);
         }
@@ -191,36 +191,71 @@ namespace SportsCenterApi.Services
 
         public async Task<List<AvailableSlotsDTO>> GetAvailableSlotsAsync(int facilityId, DateOnly date)
         {
-            // Get facility
-            var facility = await _facilitiesRepository.GetByIdAsync(facilityId);
-            if (facility == null) throw new KeyNotFoundException("Facility not found");
+            Console.WriteLine($"[DEBUG] GetAvailableSlots called - FacilityId: {facilityId}, Date: {date}");
+
+            //Get facility WITH SCHEDULES
+            var facility = await _reservationRepository.GetFacilityByIdAsync(facilityId);
+            if (facility == null)
+            {
+                Console.WriteLine("[DEBUG] Facility not found!");
+                throw new KeyNotFoundException("Facility not found");
+            }
+
+            Console.WriteLine($"[DEBUG] Facility found: {facility.Name}, Type: {facility.Type}");
+            Console.WriteLine($"[DEBUG] FacilitySchedules count: {facility.FacilitySchedules?.Count ?? 0}");
 
             //Name of the day
             var dayName = date.DayOfWeek.ToString();
+            Console.WriteLine($"[DEBUG] Day of week: {dayName}");
 
             //Search the schedule
             var schedule = facility.FacilitySchedules
                 .FirstOrDefault(s => s.Day_of_Week.Equals(dayName, StringComparison.OrdinalIgnoreCase));
 
-            if (schedule == null) return new List<AvailableSlotsDTO>();
+            if (schedule == null)
+            {
+                Console.WriteLine($"[DEBUG] No schedule found for {dayName}");
+                Console.WriteLine($"[DEBUG] Available schedules:");
+                foreach (var s in facility.FacilitySchedules)
+                {
+                    Console.WriteLine($"  - {s.Day_of_Week}: {s.OpeningTime} - {s.ClosingTime}");
+                }
+                return new List<AvailableSlotsDTO>();
+            }
+
+            Console.WriteLine($"[DEBUG] Schedule found - Opening: {schedule.OpeningTime}, Closing: {schedule.ClosingTime}");
 
             //Get existing reservations
             var reservations = await _reservationRepository.GetReservationsByFacilityAndDateAsync(facilityId, date);
+            Console.WriteLine($"[DEBUG] Found {reservations.Count} existing reservations for this date");
+
+            foreach (var r in reservations)
+            {
+                Console.WriteLine($"  - Reservation {r.ReservationId}: {r.StartTime} - {r.EndTime}");
+            }
 
             var availableSlots = new List<AvailableSlotsDTO>();
-
             int startHour = schedule.OpeningTime.Hour;
             int endHour = schedule.ClosingTime.Hour;
 
+            Console.WriteLine($"[DEBUG] Generating slots from hour {startHour} to {endHour}");
+
+            //Generate slots hour by hour
             for (int h = startHour; h < endHour; h++)
             {
-                bool isTaken = reservations.Any(r => r.StartTime.Hour == h);
+                var slotStart = new TimeOnly(h, 0);
+                var slotEnd = slotStart.AddHours(1);
+
+                //Check if this slot is occupied by ANY reservation
+                bool isTaken = reservations.Any(r =>
+                {
+                    return (r.StartTime.Hour <= h && r.EndTime.Hour > h);
+                });
+
+                Console.WriteLine($"[DEBUG] Slot {slotStart}-{slotEnd}: {(isTaken ? "OCCUPIED" : "AVAILABLE")}");
 
                 if (!isTaken)
                 {
-                    var slotStart = new TimeOnly(h, 0);
-                    var slotEnd = slotStart.AddHours(1);
-
                     availableSlots.Add(new AvailableSlotsDTO
                     {
                         StartTime = slotStart.ToString("HH:mm"),
@@ -229,6 +264,7 @@ namespace SportsCenterApi.Services
                 }
             }
 
+            Console.WriteLine($"[DEBUG] Total available slots: {availableSlots.Count}");
             return availableSlots;
         }
 

@@ -4,7 +4,6 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { ReservationResponse } from '../models/ReservationResponse';
 import { map, Observable } from 'rxjs';
 import { ReservationFilter } from '../models/ReservationFilter';
-import { CreateReservationDto } from '../models/CreateReservationDto';
 import { CreateReservationRequest } from '../models/CreateReservationRequest';
 import { TimeSlot } from '../models/TimeSlot';
 import { AvailableSlotsDTO } from '../models/AvailableSlotsDTO';
@@ -32,18 +31,20 @@ export class ReservationService {
     });
   }
 
-  filterReservations(filter: ReservationFilter): Observable<ReservationResponse[]> {
-      let params = new URLSearchParams();
-    if (filter.userId) params.set('userId', filter.userId.toString());
-    if (filter.facilityType) params.set('facilityType', filter.facilityType);
-    if (filter.facilityName) params.set('facilityName', filter.facilityName);
-    if (filter.startDate) params.set('startDate', filter.startDate);
-    if (filter.endDate) params.set('endDate', filter.endDate);
-    return this.http.get<ReservationResponse[]>(`${this.API_URL}/filter`, {
-      headers: this.getHeaders(),
-      params: params as any
-    });
-  }
+ filterReservations(filter: ReservationFilter): Observable<ReservationResponse[]> {
+  let params = new HttpParams();
+
+  if (filter.userId) params = params.set('userId', filter.userId.toString());
+  if (filter.facilityType) params = params.set('facilityType', filter.facilityType);
+  if (filter.facilityName) params = params.set('facilityName', filter.facilityName);
+  if (filter.startDate) params = params.set('startDate', filter.startDate);
+  if (filter.endDate) params = params.set('endDate', filter.endDate);
+
+  return this.http.get<ReservationResponse[]>(`${this.API_URL}/filter`, {
+    headers: this.getHeaders(),
+    params
+  });
+}
 
   deleteReservation(id: number): Observable<void> {
     return this.http.delete<void>(`${this.API_URL}/${id}`, {
