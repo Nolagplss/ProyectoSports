@@ -454,8 +454,9 @@
 /* PASO 4: Confirmation */
 .confirmation-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
+  margin: 0rem 13rem 0rem 13rem;
 }
 
 .reservation-summary {
