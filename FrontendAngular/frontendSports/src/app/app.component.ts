@@ -24,9 +24,10 @@ export class AppComponent {
         this.headerService.showHeaderWithLinks();
       } else if (currentUrl.startsWith('/login') || currentUrl.startsWith('/register')) {
         this.headerService.showHeaderWithLinks();
-      } else if (currentUrl.startsWith('/dashboard')) {
-        this.headerService.showHeaderOnlyLogo();
-      } else {
+      } else if (currentUrl.startsWith('/app/dashboard')) {
+        this.headerService.hideHeader();
+      }
+       else {
         this.headerService.showHeaderWithLinks();
       }
     });

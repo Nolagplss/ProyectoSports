@@ -7,7 +7,8 @@ using SportsCenterApi.Repositories;
 using System.Text;
 using NLog;
 using NLog.Web;
-using Microsoft.OpenApi.Models;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             //CODE BY SAMUEL RADU DRAGOMIR
+using Microsoft.OpenApi.Models;
+using System.IdentityModel.Tokens.Jwt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             //CODE BY SAMUEL RADU DRAGOMIR
 
 
 var logger = LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
@@ -17,6 +18,10 @@ try
     logger.Debug("Starting SportsCenterApi");
 
     var builder = WebApplication.CreateBuilder(args);
+
+    // JWT configuration
+    JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+    JwtSecurityTokenHandler.DefaultOutboundClaimTypeMap.Clear();
 
     // Add services to the container.
     builder.Logging.ClearProviders();

@@ -20,9 +20,12 @@ namespace SportsCenterApi.Services
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role.RoleName)
+
+                new Claim("sub", user.UserId.ToString()),
+                new Claim("email", user.Email),
+                new Claim("name", user.FirstName),
+                new Claim("role", user.Role.RoleName)
+
             };  
 
 

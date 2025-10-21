@@ -1,0 +1,76 @@
+<!-- Main layout container -->
+<div class="layout-container">
+  <!-- Sidebar -->
+  <aside class="sidebar" [class.sidebar-closed]="!sidebarOpen">
+    <!-- Sidebar header -->
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">🏟️</span>
+        <span class="logo-text" [class.hidden]="!sidebarOpen">SportBook</span>
+      </div>
+      <button class="toggle-btn" (click)="toggleSidebar()" aria-label="Toggle sidebar">
+        <span class="hamburger-icon">☰</span>
+      </button>
+    </div>
+
+    <!-- Navigation menu -->
+    <nav class="sidebar-nav">
+      <ul class="menu-list">
+        @for (item of getVisibleMenuItems(); track item.id) {
+          <li>
+            <button
+              class="menu-item"
+              [class.active]="activeView === item.id"
+              (click)="selectView(item.id)"
+              [title]="item.label"
+            >
+              <span class="menu-icon">{{ getIconClass(item.icon) }}</span>
+              <span class="menu-label" [class.hidden]="!sidebarOpen">
+                {{ item.label }}
+              </span>
+            </button>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <!-- Sidebar footer (user info) -->
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="user-avatar">{{ userName?.charAt(0)?.toUpperCase() }}</div>
+        <div class="user-details" [class.hidden]="!sidebarOpen">
+          <p class="user-name">{{ userName }}</p>
+          <p class="user-role">{{ userRole }}</p>
+        </div>
+      </div>
+      <button class="logout-btn" (click)="logout()" [title]="'Logout'" aria-label="Logout">
+        🚪
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main content area -->
+  <main class="main-content">
+    <!-- Top header -->
+    <header class="top-header">
+      <div class="header-left">
+        <button class="mobile-menu-btn" (click)="toggleSidebar()" aria-label="Toggle menu">
+          ☰
+        </button>
+        <h1>{{ (activeView === 'reservations' ? 'My Reservations' : 
+                 activeView === 'users' ? 'Users Management' :
+                 activeView === 'facilities' ? 'Facilities' :
+                 activeView === 'reports' ? 'Reports' :
+                 activeView === 'settings' ? 'Settings' : 'Dashboard') }}</h1>
+      </div>
+      <div class="header-right">
+        <span class="user-greeting">Welcome, {{ userName }}</span>
+      </div>
+    </header>
+
+    <!-- Content area -->
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
